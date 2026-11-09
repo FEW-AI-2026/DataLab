@@ -1,0 +1,200 @@
+[
+  {
+    "id": "",
+    "title": "CY-Bench Mexico",
+    "category": "agri",
+    "is_mexico": true,
+    "year": 2026,
+    "description": "",
+    "format": "",
+    "url": "/datasets/cy-bench-mexico/",
+    "keywords": "CY-Bench Mexico Datos de maíz en México que reúnen estadísticas agrícolas de INEGI, observaciones meteorológicas, vegetación satelital, suelo y calendario de cultivo. ds-cy-bench-mexico CSV / NetCDF / Python Scripts Estadísticas agrícolas Tipo de maíz, superficie sembrada y cosechada, rendimiento y producción. crop_name adm_id harvest_year planted_area harvest_area yield production Clima Temperatura, precipitación, radiación solar, evapotranspiración y déficit de presión de vapor. crop_name adm_id date Vegetación satelital Series de índices de vegetación y radiación absorbida, agregadas por región agrícola. NDVI fPAR adm_id date Suelo Agua disponible y densidad aparente del suelo, procedentes de WISE. awc bulk_density adm_id Calendario agrícola Día del año de siembra y de madurez o cosecha. planting_doy maturity_doy adm_id"
+  },
+  {
+    "id": "",
+    "title": "Hidro-MX 2026",
+    "category": "water",
+    "is_mexico": true,
+    "year": 2026,
+    "description": "",
+    "format": "",
+    "url": "/datasets/hidro-mx-2026/",
+    "keywords": "Hidro-MX 2026 Registros hidrológicos y meteorológicos organizados por estaciones y cuencas de México. ds-hidro-mx-2026 CSV / ZIP Estructurado Ríos y estaciones Caudal y nivel de río en estaciones hidrométricas. Meteorología Precipitación y temperatura de estaciones meteorológicas. Cuencas Cutzamala, Lerma–Santiago, Pánuco y Upper Balsas, según la ficha del recurso."
+  },
+  {
+    "id": "",
+    "title": "CDMX Air Quality · 2022–2026",
+    "category": "air",
+    "is_mexico": true,
+    "year": 2026,
+    "description": "",
+    "format": "",
+    "url": "/datasets/cdmx-air-quality-2022-2026/",
+    "keywords": "CDMX Air Quality · 2022–2026 Un histórico diario de calidad del aire de Ciudad de México, acompañado de un diccionario de variables, metadatos de ciudad y documentación. ds-cdmx-air-quality-2022-2026 CSV / JSON / ZIP Contaminantes PM2.5, PM10, ozono, dióxido de nitrógeno, dióxido de azufre y monóxido de carbono. pm2_5 pm10 ozone nitrogen_dioxide sulphur_dioxide carbon_monoxide Índices y aerosoles AQI de EE. UU. y Europa, índice UV, polvo y profundidad óptica de aerosoles. us_aqi european_aqi uv_index dust aerosol_optical_depth Fecha Una fecha por registro, con valores ausentes en algunas mediciones. date Metadatos Descripción de la ciudad, diccionario de campos y ficha del recurso."
+  },
+  {
+    "id": "",
+    "title": "PQ-CryptoBench",
+    "category": "cs-cinvestav",
+    "is_mexico": false,
+    "year": 2026,
+    "description": "",
+    "format": "",
+    "url": "/datasets/postquantum-benchmarks/",
+    "keywords": "PQ-CryptoBench Mediciones de ejecución de esquemas criptográficos en procesadores ARM y RISC-V. ds-postquantum-benchmarks JSON / CSV / C Headers Tiempo y ciclos Duración y ciclos de reloj de las operaciones criptográficas. Recursos Consumo energético y huella de memoria de cada medición. Configuración Esquema criptográfico y procesador asociados a las pruebas."
+  },
+  {
+    "id": "",
+    "title": "CIMMYT Farm Dataset",
+    "category": "agri",
+    "is_mexico": true,
+    "year": 2025,
+    "description": "",
+    "format": "",
+    "url": "/datasets/cimmyt-mexico-farm/",
+    "keywords": "CIMMYT Farm Dataset Bitácoras agrícolas de parcelas mexicanas: siembra, cosecha, labores, insumos, riego y resultados económicos, distribuidos en seis libros Excel y un glosario. ds-cimmyt-mexico-farm XLSX / CSV (7 archivos oficiales) Parcelas y bitácoras Información del terreno, localidad y ciclo agrícola. STATE YEAR PLOT.TYPE Siembra y cosecha Cultivo, fecha de siembra, semilla, régimen hídrico y rendimiento registrado. CROP CROP.SOWING.DATE ACTUAL.YIELD.(UNIT/HA) Labores e insumos Actividades de campo, productos aplicados y fertilización. Riego y economía Aplicaciones de riego, consumo de agua, costos e ingresos."
+  },
+  {
+    "id": "",
+    "title": "CENACE Power Grid",
+    "category": "energy",
+    "is_mexico": true,
+    "year": 2025,
+    "description": "",
+    "format": "",
+    "url": "/datasets/cenace-power-grid/",
+    "keywords": "CENACE Power Grid Repositorio de herramientas para consultar datos de CENACE. La vista previa muestra el catálogo público de nodos eléctricos NodosP incluido en el repositorio. ds-cenace-power-grid Python / CSV / JSON Nodos eléctricos Clave, nombre y nivel de tensión de cada nodo. CLAVE NOMBRE NIVEL DE TENSIÓN (kV) Organización regional Sistema eléctrico, centro de control, zonas de carga y ubicación. Demanda y generación Código para obtener datos del operador; las series no están incluidas en esta vista previa. Mercado eléctrico Herramientas del repositorio para consultar el mercado y sus precios."
+  },
+  {
+    "id": "",
+    "title": "ACYD Mexico",
+    "category": "agri",
+    "is_mexico": true,
+    "year": 2025,
+    "description": "",
+    "format": "",
+    "url": "/datasets/acyd-agro-climatic-mexico/",
+    "keywords": "ACYD Mexico Tablas de rendimiento agrícola de México, archivos de características agroclimáticas, calendario de maíz y límites geográficos municipales. ds-acyd-agro-climatic-mexico CSV / GeoPackage (GADM41) Tablas agrícolas Cultivo, municipio, año, rendimiento, superficie y producción. admin_level_1 admin_level_2 year area_planted area_harvested production Características Localización y propiedades agroclimáticas y del suelo; 742 columnas en la primera parte. latitude longitude clay_0_5cm ph_h2o_0_5cm Calendario y riego Calendario de maíz y fracción de superficie irrigada. Geografía municipal Límites administrativos de México, archivo GADM41."
+  },
+  {
+    "id": "",
+    "title": "IBERO CDMX Ozone",
+    "category": "air",
+    "is_mexico": true,
+    "year": 2025,
+    "description": "",
+    "format": "",
+    "url": "/datasets/ibero-cdmx-ozone/",
+    "keywords": "IBERO CDMX Ozone Registros de ozono y condiciones meteorológicas de la estación de monitoreo IBERO en Ciudad de México. ds-ibero-cdmx-ozone CSV / XLSX Ozono Concentración de O₃ durante el periodo de monitoreo. Clima y radiación Radiación solar, temperatura, humedad, presión, lluvia y viento. Periodo Fechas de observación indicadas en la ficha del recurso."
+  },
+  {
+    "id": "",
+    "title": "CONAGUA AQuA-P",
+    "category": "water",
+    "is_mexico": true,
+    "year": 2025,
+    "description": "",
+    "format": "",
+    "url": "/datasets/conagua-aqua-p-water/",
+    "keywords": "CONAGUA AQuA-P Datos de monitoreo de calidad del agua de CONAGUA, con parámetros fisicoquímicos y biológicos y categorías de calidad. ds-conagua-aqua-p-water CSV / Tabular ML Ready Mediciones de agua Parámetros fisicoquímicos y biológicos de los sitios de muestreo. Sitios y regiones Regiones hidrológicas y sitios de aguas subterráneas, ríos, lagos y costa, según la ficha. Calidad Clasificación de la calidad del agua asociada a las mediciones."
+  },
+  {
+    "id": "",
+    "title": "Groundwater Quality Mexico",
+    "category": "water",
+    "is_mexico": true,
+    "year": 2025,
+    "description": "",
+    "format": "",
+    "url": "/datasets/groundwater-quality-mexico/",
+    "keywords": "Groundwater Quality Mexico Mediciones de calidad del agua subterránea asociadas a pozos de México e índice GWQI. ds-groundwater-quality-mexico CSV / XLSX Pozos Localización e identificación de los pozos de extracción. Análisis del agua Mediciones analíticas de la muestra de agua de cada sitio. Índice GWQI Índice de calidad del agua subterránea y categorías de aptitud, según la ficha."
+  },
+  {
+    "id": "",
+    "title": "Cinvestav-MedES",
+    "category": "cs-cinvestav",
+    "is_mexico": false,
+    "year": 2025,
+    "description": "",
+    "format": "",
+    "url": "/datasets/nlp-es-biomed/",
+    "keywords": "Cinvestav-MedES Textos clínicos desidentificados en español y anotaciones de entidades biomédicas. ds-nlp-es-biomed JSONL / Parquet Textos Notas clínicas desidentificadas descritas en la ficha del recurso. Anotaciones Entidades y referencias terminológicas SNOMED-CT."
+  },
+  {
+    "id": "",
+    "title": "HPC-Trace-MX",
+    "category": "cs-cinvestav",
+    "is_mexico": false,
+    "year": 2025,
+    "description": "",
+    "format": "",
+    "url": "/datasets/hpc-telemetry-cluster/",
+    "keywords": "HPC-Trace-MX Telemetría de un clúster de cómputo: métricas de GPU, red y ejecución de trabajos. ds-hpc-telemetry-cluster Apache Parquet / CSV GPU y memoria Temperatura y uso de memoria VRAM, según la ficha del recurso. Red y trabajos Latencia de red y registros de fallos de trabajos."
+  },
+  {
+    "id": "",
+    "title": "Electricity &amp; Weather Mexico",
+    "category": "energy",
+    "is_mexico": true,
+    "year": 2024,
+    "description": "",
+    "format": "",
+    "url": "/datasets/mexican-community-electricity/",
+    "keywords": "Electricity &amp; Weather Mexico Mediciones de demanda eléctrica de hogares y observaciones meteorológicas de una comunidad de Puebla. ds-mexican-community-electricity CSV / XLSX Demanda eléctrica Potencia activa en kW y consumo acumulado en kWh, según la ficha del recurso. Microclima Temperatura, irradiancia solar, humedad, viento y presión. Hogares y tiempo Observaciones asociadas a hogares de la comunidad y a su instante de medición."
+  },
+  {
+    "id": "",
+    "title": "Mexico City Weather",
+    "category": "air",
+    "is_mexico": true,
+    "year": 2024,
+    "description": "",
+    "format": "",
+    "url": "/datasets/mexico-city-weather/",
+    "keywords": "Mexico City Weather Observaciones meteorológicas históricas de SIH-CONAGUA para localidades de Ciudad de México: precipitación diaria y temperaturas máxima y mínima. ds-mexico-city-weather CSV (1M – 10M observaciones) Precipitación Lluvia medida en los archivos de estaciones. RAINFALL Temperatura Temperaturas máxima y mínima cuando están disponibles. MAXT MINT Localidad y fecha Localidad, año, mes y día de cada observación. LOCALITY YEAR MONTH DAY Estaciones originales Registros separados por clave de estación y un archivo maestro agregado."
+  },
+  {
+    "id": "",
+    "title": "LatAm-Crops",
+    "category": "cs-cinvestav",
+    "is_mexico": false,
+    "year": 2024,
+    "description": "",
+    "format": "",
+    "url": "/datasets/cv-agri-latam/",
+    "keywords": "LatAm-Crops Imágenes aéreas multiespectrales de cultivos y anotaciones de detección y segmentación. ds-cv-agri-latam COCO JSON / TIFF / JPG Imágenes Capturas de campos agrícolas de México y Centroamérica, según la ficha. Anotaciones Anotaciones para identificar y delimitar elementos en las imágenes."
+  },
+  {
+    "id": "",
+    "title": "Cinvestav-BCI",
+    "category": "cs-cinvestav",
+    "is_mexico": false,
+    "year": 2024,
+    "description": "",
+    "format": "",
+    "url": "/datasets/eeg-bci-motor/",
+    "keywords": "Cinvestav-BCI Señales electroencefalográficas registradas durante tareas de imaginería motora. ds-eeg-bci-motor EDF / HDF5 / NumPy Señales EEG Registros de actividad cerebral multicanal descritos en la ficha. Tareas y sesiones Identificación de las tareas motoras y sesiones asociadas a las señales."
+  },
+  {
+    "id": "",
+    "title": "CDMX-UrbanFlow",
+    "category": "cs-cinvestav",
+    "is_mexico": false,
+    "year": 2023,
+    "description": "",
+    "format": "",
+    "url": "/datasets/mexico-traffic-urban/",
+    "keywords": "CDMX-UrbanFlow Series georreferenciadas de movilidad urbana y calidad del aire de Ciudad de México. ds-mexico-traffic-urban GeoJSON / Parquet / SQLite Tráfico Flujo vehicular y velocidad promedio en arterias de la ciudad. Calidad del aire Índices de calidad del aire descritos en la ficha del recurso. Ubicación Ubicación de las observaciones y de los sensores urbanos."
+  },
+  {
+    "id": "",
+    "title": "CDMX Air Pollution · 2008–2012",
+    "category": "air",
+    "is_mexico": true,
+    "year": 2017,
+    "description": "",
+    "format": "",
+    "url": "/datasets/cdmx-air-pollution-mendeley/",
+    "keywords": "CDMX Air Pollution · 2008–2012 Observaciones de contaminación atmosférica y meteorología de las estaciones PED, SUR y TPN del Valle de México. ds-cdmx-air-pollution-mendeley CSV / XLSX Contaminantes PM2.5, PM10, ozono, NO₂ y CO, según la ficha del recurso. Meteorología Temperatura, humedad relativa y velocidad y dirección del viento. Estaciones Identificación de la estación y del momento de cada observación."
+  }
+]

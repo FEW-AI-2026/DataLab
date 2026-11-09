@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datasets & Benchmarks Abiertos · DataLab Cinvestav</title>
+  <meta name="description" content="Catálogo completo de los 18 datasets y benchmarks curados por DataLab Cinvestav: agricultura, energía, agua, clima, criptografía y biocomputación.">
+  <meta name="theme-color" content="#0f3d32">
+
+  <link rel="icon" type="image/png" href="./cinvestav-logo.png">
+
+  <!-- Tipografía Editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,550;0,9..40,650;0,9..40,700;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- Barra Institucional -->
+  <div class="institution-bar">
+    <div class="container">
+      <div style="display:flex; align-items:center; gap:1.2rem;">
+        <a href="https://www.cinvestav.mx/" target="_blank" rel="noopener noreferrer">Cinvestav</a>
+        <span style="opacity:0.4;">·</span>
+        <a href="https://wwwcs.cs.cinvestav.mx/" target="_blank" rel="noopener noreferrer">Departamento de Computación</a>
+        <span style="opacity:0.4;">·</span>
+        <a href="index.html">DataLab Cinvestav</a>
+      </div>
+      <div>
+        <span style="color:#7ca394; font-size:0.75rem;">Repositorio de Datos Abiertos para la Ciencia</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="index.html" class="brand-wrapper">
+          <img src="./cinvestav-logo.png" alt="Cinvestav" class="brand-logo-img" width="130" height="46">
+          <div class="brand-identity">
+            <span class="brand-title">Data<span class="accent">Lab</span></span>
+            <span class="brand-subtitle">Datasets & Benchmarks</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio DataLab</a></li>
+          <li><a href="datasets.html" class="nav-link active">Datasets (18)</a></li>
+          <li><a href="graduados.html" class="nav-link">Graduados (37)</a></li>
+          <li><a href="dra-xiaoou-li.html" class="nav-link">Dra. Xiaoou Li (CV)</a></li>
+          <li><a href="index.html#publicaciones" class="nav-link">Publicaciones</a></li>
+          <li><a href="index.html#cursos" class="nav-link">Cursos</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="btn-theme-toggle" id="theme-toggle-btn" aria-label="Cambiar tema">
+            <!-- Inyectado por JS -->
+          </button>
+          <a href="index.html#contacto" class="btn-cta-contact">
+            Contacto
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        
+          <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumb-bar" aria-label="Ruta de navegación">
+        <a href="index.html">DataLab Cinvestav</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Repositorio de Datasets & Benchmarks</span>
+      </nav>
+    </div>
+
+    <!-- Hero de Datasets -->
+    <section class="container" style="padding: 2.5rem 0 3.5rem;">
+      <div style="max-width:860px; margin-bottom:2.5rem;">
+        <span class="section-eyebrow">Ciencia Abierta y Reproducible</span>
+        <h1 class="section-title" style="font-size:clamp(2.2rem, 3.8vw, 3rem); margin:0.4rem 0 1rem;">
+          Datasets & Benchmarks Abiertos de Investigación
+        </h1>
+        <p class="section-desc" style="font-size:1.05rem; line-height:1.7;">
+          Repositorio curado de datos científicos, series temporales y benchmarks computacionales desarrollados por DataLab. Disponibles para la comunidad científica con especificaciones técnicas, metadatos estructurados y scripts de reproducibilidad.
+        </p>
+      </div>
+
+      <!-- Filtros Temáticos (Pills) -->
+      <div class="topics-nav-bar" role="tablist" aria-label="Filtrar por eje temático">
+        <button type="button" class="topic-pill active" data-dataset-cat="all">Todos los datasets (18)</button>
+        <button type="button" class="topic-pill" data-dataset-cat="mexico">
+          <span class="shape shape-diamond" style="background-color:var(--color-gold); margin-right:0.35rem;"></span>
+          México (12)
+        </button>
+        <button type="button" class="topic-pill" data-dataset-cat="agri">Agricultura & Alimentos</button>
+        <button type="button" class="topic-pill" data-dataset-cat="energy">Energía & Red Eléctrica</button>
+        <button type="button" class="topic-pill" data-dataset-cat="water">Recursos Hídricos</button>
+        <button type="button" class="topic-pill" data-dataset-cat="climate">Medio Ambiente & Aire CDMX</button>
+        <button type="button" class="topic-pill" data-dataset-cat="comp">Computación & HPC</button>
+      </div>
+
+      <!-- Buscador y Contador -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin: 1.5rem 0 2rem; flex-wrap:wrap; gap:1rem;">
+        <div class="search-filter-box" style="width:380px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="dataset-search-input" placeholder="Buscar por maíz, agua, CENACE, CDMX..." aria-label="Buscar dataset">
+        </div>
+
+        <span id="datasets-counter" style="font-size:0.9rem; font-weight:600; color:var(--text-muted);">
+          Cargando recursos...
+        </span>
+      </div>
+
+      <!-- Grilla de Datasets Dinámica -->
+      <div class="dataset-grid" id="datasets-grid-container">
+        <!-- Inyectado por app.js -->
+      </div>
+
+      <!-- Guía de Uso y Citación -->
+      <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:2.5rem; margin-top:2rem; box-shadow:var(--shadow-sm);">
+        <span class="section-eyebrow">Política de Datos Abiertos</span>
+        <h3 style="font-family:var(--font-serif); font-size:1.5rem; margin-bottom:0.75rem;">¿Cómo citar y utilizar estos recursos?</h3>
+        <p style="font-size:0.95rem; color:var(--text-muted); line-height:1.65; margin-bottom:1.5rem;">
+          Todos los datasets aquí indexados están destinados al avance de la investigación científica, formación académica y desarrollo tecnológico. Al utilizar cualquiera de estos recursos en artículos, tesis o proyectos, se solicita incluir la atribución formal correspondiente a <strong>DataLab · Departamento de Computación, Cinvestav</strong> y citar el artículo de referencia indicado en cada ficha técnica.
+        </p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="mailto:lixo@cs.cinvestav.mx" class="btn-cta-contact" style="font-size:0.88rem; padding:0.6rem 1.25rem;">
+            Solicitar acceso a series temporales completas
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Modal para Detalle de Dataset -->
+  <div class="modal-overlay" id="app-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Ficha Técnica del Dataset</h3>
+        <button type="button" class="btn-close-modal" id="modal-close-btn" aria-label="Cerrar">&times;</button>
+      </div>
+      <div class="modal-code-area" id="modal-code-content"></div>
+      <div style="display:flex; justify-content:flex-end; gap:0.8rem;">
+        <button type="button" class="btn-modal-copy" id="modal-copy-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copiar información técnica
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Data<span style="color:var(--color-brand-accent);">Lab</span></h3>
+          <p>
+            Laboratorio de Ciencia de Datos<br>
+            Departamento de Computación · Cinvestav Zacatenco<br>
+            Ciudad de México, México.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Portal DataLab</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Inicio del Laboratorio</a></li>
+            <li><a href="graduados.html">Directorio de Graduados (37)</a></li>
+            <li><a href="dra-xiaoou-li.html">Dra. Xiaoou Li (CV)</a></li>
+            <li><a href="index.html#publicaciones">Publicaciones Científicas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto de Datos</h4>
+          <p style="font-size:0.88rem; line-height:1.6; margin-bottom:0.8rem;">
+            Dra. Xiaoou Li<br>
+            <a href="mailto:lixo@cs.cinvestav.mx" style="color:var(--color-brand-accent); font-weight:600;">lixo@cs.cinvestav.mx</a>
+          </p>
+          <p style="font-size:0.82rem; color:#859e95;">
+            Av. IPN 2508, Zacatenco, GAM, CDMX · 07360
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Cinvestav · DataLab Datasets</div>
+        <div><a href="index.html">← Volver al Portal DataLab</a></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

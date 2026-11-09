@@ -1,0 +1,2100 @@
+/* ==========================================================================
+   DataLab Cinvestav · Estilo Editorial Moderno y de Alto Rendimiento
+   Inspirado en: Gates Notes, Sean Carroll, Stephen Wolfram & Scott Aaronson
+   ========================================================================== */
+
+:root {
+  /* Paleta Institucional Cinvestav Modernizada */
+  --color-brand-primary: #0f3d32;     /* Verde Cinvestav profundo */
+  --color-brand-accent: #009677;      /* Verde jade / teal de acento */
+  --color-brand-light: #e8f4f0;       /* Tinte jade suave */
+  --color-brand-crimson: #a02830;     /* Rojo carmesí institucional */
+  --color-crimson-light: #fbebee;
+  --color-gold: #c68a27;
+  
+  /* Sistema de Luz (Default) */
+  --bg-canvas: #f7f9f7;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-subtle: #edf1ed;
+  --border-subtle: #dbe4dd;
+  --border-strong: #bdcbbf;
+  
+  --text-main: #13221e;
+  --text-muted: #53645e;
+  --text-faint: #7b8e87;
+  --text-inverse: #ffffff;
+
+  /* Sombras editoriales y elevaciones */
+  --shadow-sm: 0 1px 2px rgba(15, 61, 50, 0.05);
+  --shadow-md: 0 4px 14px rgba(15, 61, 50, 0.08);
+  --shadow-lg: 0 12px 30px rgba(15, 61, 50, 0.12);
+  --shadow-hover: 0 16px 36px rgba(15, 61, 50, 0.16);
+
+  /* Tipografías */
+  --font-serif: "Newsreader", "Charter", "Merriweather", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "Cascadia Code", "Fira Code", monospace;
+
+  /* Dimensiones y espaciado */
+  --container-max: 1240px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Modo Oscuro Refinado (Gates Notes / Sean Carroll) */
+[data-theme="dark"] {
+  --bg-canvas: #0c1412;
+  --bg-surface: #14201c;
+  --bg-surface-elevated: #1a2a25;
+  --bg-subtle: #192722;
+  --border-subtle: #243831;
+  --border-strong: #334d44;
+
+  --text-main: #e8f0ec;
+  --text-muted: #9db2a9;
+  --text-faint: #6c837a;
+  --text-inverse: #0c1412;
+
+  --color-brand-primary: #185244;
+  --color-brand-accent: #1bd4a7;
+  --color-brand-light: rgba(27, 212, 167, 0.12);
+  --color-brand-crimson: #d94b54;
+  --color-crimson-light: rgba(217, 75, 84, 0.15);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 18px 46px rgba(0, 0, 0, 0.6);
+}
+
+/* Reset y Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  overflow-x: hidden;
+}
+
+/* Enlaces y botones base */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenedor central */
+.container {
+  width: min(var(--container-max), calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 1.5rem);
+  }
+}
+
+/* ==========================================================================
+   1. Barra Institucional Superior & Navegación (Header)
+   ========================================================================== */
+.institution-bar {
+  background-color: #081f19;
+  color: #a4beb4;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.4rem 0;
+}
+
+.institution-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.institution-bar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #c2d8cf;
+}
+
+.institution-bar a:hover {
+  color: #ffffff;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247, 249, 247, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+
+[data-theme="dark"] .site-header {
+  background: rgba(20, 32, 28, 0.92);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brand-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-identity {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-brand-primary);
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+[data-theme="dark"] .brand-title {
+  color: var(--text-main);
+}
+
+.brand-title span.accent {
+  color: var(--color-brand-accent);
+}
+
+.brand-subtitle {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Menú de Navegación */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 0.92rem;
+  font-weight: 550;
+  color: var(--text-muted);
+  padding: 0.5rem 0.25rem;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-brand-primary);
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  color: var(--color-brand-accent);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-brand-accent);
+  border-radius: var(--radius-pill);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Botón Dark Mode */
+.btn-theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-theme-toggle:hover {
+  border-color: var(--color-brand-accent);
+  color: var(--color-brand-accent);
+  transform: rotate(15deg);
+}
+
+.btn-cta-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-primary);
+  color: #ffffff !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn-cta-contact:hover {
+  background: #145546;
+  transform: translateY(-1px);
+}
+
+.mobile-menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--text-main);
+  padding: 0.45rem;
+  border-radius: var(--radius-sm);
+  line-height: 1;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.mobile-menu-btn:hover {
+  color: var(--color-brand-accent);
+  background: var(--bg-subtle);
+}
+
+@media (max-width: 960px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--bg-surface);
+    flex-direction: column;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-lg);
+    gap: 1rem;
+    z-index: 1000;
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-cta-contact {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   2. Hero Editorial Moderno (Estilo Gates Notes & Sean Carroll)
+   ========================================================================== */
+.hero-editorial {
+  padding: 2.5rem 0 3.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Lead Feature Card (Gates Notes Featured Story) */
+.featured-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  box-shadow: var(--shadow-md);
+}
+
+.featured-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-strong);
+}
+
+.featured-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.featured-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.featured-card:hover .featured-media img {
+  transform: scale(1.03);
+}
+
+.media-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(15, 61, 50, 0.88);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-pill);
+}
+
+.featured-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.story-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.story-pill {
+  background: var(--color-brand-light);
+  color: var(--color-brand-accent);
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+}
+
+.featured-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  line-height: 1.25;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.featured-summary {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.featured-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-brand-accent);
+}
+
+.link-read-more svg {
+  transition: transform var(--transition-fast);
+}
+
+.featured-card:hover .link-read-more svg {
+  transform: translateX(4px);
+}
+
+/* Columna Lateral del Hero: Enfoque y Director Note (Scott Aaronson / Wolfram style) */
+.hero-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aside-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.director-card {
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid var(--color-brand-accent);
+}
+
+.director-header {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+.director-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-brand-accent);
+}
+
+.director-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.director-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.director-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+}
+
+.director-quote::before {
+  content: "“";
+  font-size: 1.8rem;
+  line-height: 0;
+  display: inline-block;
+  margin-right: 0.2rem;
+  vertical-align: -0.3rem;
+  color: var(--color-brand-accent);
+}
+
+.director-quote::after {
+  content: "”";
+  font-size: 1.8rem;
+  line-height: 0;
+  display: inline-block;
+  margin-left: 0.2rem;
+  vertical-align: -0.3rem;
+  color: var(--color-brand-accent);
+}
+
+.director-links {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.badge-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.badge-link:hover {
+  background: var(--color-brand-light);
+  color: var(--color-brand-accent);
+  border-color: var(--color-brand-accent);
+}
+
+/* Secondary stories in hero aside */
+.sub-story-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sub-story-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.sub-story-thumb {
+  width: 76px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.sub-story-info h4 {
+  font-size: 0.92rem;
+  font-weight: 650;
+  line-height: 1.35;
+  margin-bottom: 0.2rem;
+}
+
+.sub-story-info .meta {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+}
+
+/* ==========================================================================
+   3. Panel de Métricas / Cronología de Impacto (Stephen Wolfram style)
+   ========================================================================== */
+.impact-strip {
+  background: var(--bg-surface);
+  border-block: 1px solid var(--border-subtle);
+  padding: 2rem 0;
+  margin-bottom: 3.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 0.5rem;
+}
+
+.stat-number {
+  font-family: var(--font-serif);
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+[data-theme="dark"] .stat-number {
+  color: var(--color-brand-accent);
+}
+
+.stat-label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   4. Barra de Filtro Temático (Gates Notes Topic Pills)
+   ========================================================================== */
+.topics-nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2.5rem;
+  scrollbar-width: none;
+}
+
+.topics-nav-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.topic-pill {
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.topic-pill:hover {
+  border-color: var(--color-brand-accent);
+  color: var(--color-brand-accent);
+  background: var(--color-brand-light);
+}
+
+.topic-pill.active {
+  background: var(--color-brand-primary);
+  color: #ffffff;
+  border-color: var(--color-brand-primary);
+}
+
+[data-theme="dark"] .topic-pill.active {
+  background: var(--color-brand-accent);
+  color: #0c1412;
+  border-color: var(--color-brand-accent);
+}
+
+/* ==========================================================================
+   5. Sección de Datasets & Benchmarks (Wolfram / Aaronson style)
+   ========================================================================== */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-eyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--color-brand-crimson);
+  margin-bottom: 0.35rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.section-desc {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin-top: 0.4rem;
+}
+
+/* Caja de Búsqueda Instantánea */
+.search-filter-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 1rem;
+  width: min(380px, 100%);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.search-filter-box:focus-within {
+  border-color: var(--color-brand-accent);
+  box-shadow: 0 0 0 3px rgba(0, 150, 119, 0.15);
+}
+
+.search-filter-box input {
+  border: none;
+  background: none;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  outline: none;
+  width: 100%;
+}
+
+.search-filter-box svg {
+  color: var(--text-faint);
+  flex-shrink: 0;
+}
+
+/* Grilla de Datasets */
+.dataset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 640px) {
+  .dataset-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dataset-card-modern {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  position: relative;
+}
+
+.dataset-card-modern:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-brand-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.dataset-top-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.dataset-category-pill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-light);
+  color: var(--color-brand-accent);
+}
+
+.dataset-year {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-faint);
+}
+
+.dataset-name {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 650;
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+  color: var(--text-main);
+}
+
+.dataset-summary {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.dataset-bottom-info {
+  margin-top: auto;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dataset-format-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  background: var(--bg-subtle);
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-open-dataset {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-brand-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.btn-open-dataset:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   6. Sección de Publicaciones (Scott Aaronson Rigor & BibTeX)
+   ========================================================================== */
+.publications-section {
+  padding: 4rem 0;
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.pub-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pub-filter-select {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  outline: none;
+}
+
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.publication-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+@media (max-width: 768px) {
+  .publication-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+.publication-item:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.pub-year-badge {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  background: var(--color-brand-light);
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+[data-theme="dark"] .pub-year-badge {
+  color: var(--color-brand-accent);
+}
+
+.pub-content h4 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+  color: var(--text-main);
+}
+
+.pub-venue {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--color-brand-crimson);
+  margin-bottom: 0.4rem;
+}
+
+.pub-citation {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.pub-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .pub-actions {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+}
+
+.btn-bibtex {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-bibtex:hover {
+  background: var(--color-brand-light);
+  color: var(--color-brand-accent);
+  border-color: var(--color-brand-accent);
+}
+
+.btn-doi-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-brand-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.btn-doi-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   7. Cronología de Tesis & Egresados (Wolfram / Carroll style)
+   ========================================================================== */
+.theses-section {
+  padding: 4rem 0;
+}
+
+.theses-stats-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-degree-toggle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.btn-degree-toggle.active {
+  background: var(--color-brand-primary);
+  color: #ffffff;
+  border-color: var(--color-brand-primary);
+}
+
+[data-theme="dark"] .btn-degree-toggle.active {
+  background: var(--color-brand-accent);
+  color: #0c1412;
+}
+
+.theses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+}
+
+.thesis-card-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.thesis-card-item:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.thesis-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.thesis-degree-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-light);
+  color: var(--color-brand-accent);
+}
+
+.thesis-degree-pill.phd {
+  background: var(--color-crimson-light);
+  color: var(--color-brand-crimson);
+}
+
+.thesis-student {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 650;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.thesis-topic {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: auto;
+  border-top: 1px dashed var(--border-subtle);
+  padding-top: 0.6rem;
+}
+
+/* ==========================================================================
+   8. Cursos y Seminarios de Posgrado
+   ========================================================================== */
+.courses-section {
+  padding: 4rem 0;
+  background: var(--bg-subtle);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.course-card-modern {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.course-card-modern:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.course-cover-img {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  object-fit: cover;
+}
+
+.course-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.course-cat {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--color-brand-accent);
+  margin-bottom: 0.4rem;
+}
+
+.course-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 650;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+/* ==========================================================================
+   9. Modal de BibTeX y Detalle de Dataset
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 20, 18, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  max-width: 650px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.modal-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.btn-close-modal {
+  font-size: 1.5rem;
+  color: var(--text-faint);
+  line-height: 1;
+}
+
+.modal-code-area {
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text-main);
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin-bottom: 1.25rem;
+}
+
+.btn-modal-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--color-brand-primary);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .btn-modal-copy {
+  background: var(--color-brand-accent);
+  color: #0c1412;
+}
+
+/* ==========================================================================
+   10. Footer Institucional
+   ========================================================================== */
+.site-footer {
+  background: #081a15;
+  color: #a0b6ad;
+  padding: 4.5rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-brand h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #8fa79e;
+}
+
+.footer-col h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links-list a {
+  font-size: 0.88rem;
+  color: #a0b6ad;
+  transition: color var(--transition-fast);
+}
+
+.footer-links-list a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.82rem;
+}
+
+.footer-bottom a {
+  color: #c0d8ce;
+}
+
+/* Utilidades */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* ==========================================================================
+   Estilos Adicionales para Páginas Segmentadas (CV Dra. Li, Datasets, Graduados)
+   Inspirado en Stephen Wolfram (stephenwolfram.com) & Scott Aaronson
+   ========================================================================== */
+
+/* Breadcrumbs de Navegación */
+.breadcrumb-bar {
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-bar a {
+  color: var(--color-brand-accent);
+  font-weight: 600;
+}
+
+.breadcrumb-bar a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  color: var(--border-strong);
+}
+
+/* Header del CV Académico (Estilo Stephen Wolfram) */
+.cv-hero-section {
+  padding: 3rem 0 3.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.cv-hero-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .cv-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.cv-photo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.cv-photo {
+  width: 220px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 3px solid var(--color-brand-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.cv-title-main {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.cv-subtitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-brand-primary);
+  margin-bottom: 0.75rem;
+}
+
+[data-theme="dark"] .cv-subtitle {
+  color: var(--color-brand-accent);
+}
+
+.cv-institution-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Badges de Reconocimientos de Alto Rango (Wolfram style) */
+.recognition-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .recognition-badges-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.honor-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.55rem 0.95rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-light);
+  color: var(--color-brand-primary);
+  border: 1px solid rgba(0, 150, 119, 0.25);
+  transition: all var(--transition-fast);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.honor-badge:hover {
+  transform: translateY(-1px);
+}
+
+[data-theme="dark"] .honor-badge {
+  background: rgba(27, 212, 167, 0.08);
+  color: var(--color-brand-accent);
+  border-color: rgba(27, 212, 167, 0.35);
+}
+
+.honor-badge.gold {
+  background: rgba(198, 138, 39, 0.1);
+  color: #9d6d1c;
+  border-color: rgba(198, 138, 39, 0.35);
+}
+
+[data-theme="dark"] .honor-badge.gold {
+  background: rgba(198, 138, 39, 0.15);
+  color: #e5b053;
+  border-color: rgba(229, 176, 83, 0.4);
+}
+
+.honor-badge.crimson {
+  background: rgba(160, 40, 48, 0.08);
+  color: var(--color-brand-crimson);
+  border-color: rgba(160, 40, 48, 0.25);
+}
+
+[data-theme="dark"] .honor-badge.crimson {
+  background: rgba(217, 75, 84, 0.15);
+  color: #ff7d86;
+  border-color: rgba(255, 125, 134, 0.4);
+}
+
+/* Enlaces Rápidos de Perfiles Académicos */
+.cv-action-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-primary);
+  color: #ffffff !important;
+  font-size: 0.88rem;
+  font-weight: 650;
+  border: 1px solid var(--color-brand-primary);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.btn-cv-download:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  filter: brightness(1.1);
+}
+
+[data-theme="dark"] .btn-cv-download {
+  background: var(--color-brand-accent);
+  color: #0c1412 !important;
+  border-color: var(--color-brand-accent);
+}
+
+.btn-academic-id {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.15rem;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text-main);
+  font-size: 0.88rem;
+  font-weight: 650;
+  transition: all var(--transition-fast);
+}
+
+.btn-academic-id:hover {
+  border-color: var(--color-brand-accent);
+  color: var(--color-brand-accent);
+  background: var(--color-brand-light);
+}
+
+/* Cronología Visual Interactiva (Stephen Wolfram Timeline Style) */
+.timeline-container {
+  position: relative;
+  padding-left: 2.5rem;
+  margin: 2.5rem 0;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-strong);
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 2.2rem;
+}
+
+.timeline-entry::before {
+  content: "";
+  position: absolute;
+  left: -2.5rem;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 3px solid var(--color-brand-accent);
+  box-shadow: 0 0 0 3px rgba(0, 150, 119, 0.15);
+  margin-left: 4px;
+}
+
+.timeline-year {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-brand-accent);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 650;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.timeline-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* Tablas y Listas de Proyectos / Cátedras */
+.projects-table-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.projects-list-item {
+  padding: 1.4rem 1.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .projects-list-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+.projects-list-item:last-child {
+  border-bottom: none;
+}
+
+.project-funding-badge {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-brand-primary);
+  background: var(--color-brand-light);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+[data-theme="dark"] .project-funding-badge {
+  color: var(--color-brand-accent);
+}
+
+/* Tarjeta destacada de Tesis Premiada */
+.award-thesis-card {
+  background: rgba(198, 138, 39, 0.08);
+  border: 1px solid rgba(198, 138, 39, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* ==========================================================================
+   Figuras Minimalistas en CSS Puro (Reemplazo Elegante de Emojis)
+   ========================================================================== */
+
+.shape {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.shape-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.shape-ring {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.8px solid currentColor;
+}
+
+.shape-diamond {
+  width: 7px;
+  height: 7px;
+  transform: rotate(45deg);
+  background-color: currentColor;
+}
+
+.shape-square {
+  width: 7px;
+  height: 7px;
+  border: 1.5px solid currentColor;
+  transform: rotate(0deg);
+}
+
+.shape-bar {
+  width: 12px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: currentColor;
+}
+
+.shape-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* Hub Cards para la Navegación del Index Segmentado */
+.portal-hub-section {
+  padding: 3rem 0 4.5rem;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.hub-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.hub-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-brand-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.hub-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.hub-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 650;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.hub-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.4rem;
+  flex-grow: 1;
+}
+
+.hub-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1rem;
+}
+
+.hub-link-cta {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--color-brand-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hub-card:hover .hub-link-cta svg {
+  transform: translateX(4px);
+}
+
+
+/* ==========================================================================
+   Sección de Actividades y Charlas (Inspirada en Gates Notes)
+   ========================================================================== */
+
+.activity-spotlight {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+@media (max-width: 900px) {
+  .activity-spotlight {
+    grid-template-columns: 1fr;
+  }
+}
+
+.activity-spotlight:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-brand-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.activity-media-box {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #081a15;
+  overflow: hidden;
+}
+
+.activity-media-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.activity-spotlight:hover .activity-media-box img {
+  transform: scale(1.03);
+}
+
+.activity-play-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12, 20, 18, 0.75), rgba(12, 20, 18, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-play-video {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--color-brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-play-video svg {
+  margin-left: 3px;
+}
+
+.activity-spotlight:hover .btn-play-video {
+  transform: scale(1.1);
+  background: var(--color-brand-accent);
+  color: #ffffff;
+}
+
+.activity-spotlight-content {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.activity-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.activity-type-pill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-light);
+  color: var(--color-brand-accent);
+}
+
+[data-theme="dark"] .activity-type-pill {
+  background: rgba(27, 212, 167, 0.15);
+  color: var(--color-brand-accent);
+}
+
+.activity-date {
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  font-weight: 600;
+}
+
+.activity-spotlight-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.activity-organizer {
+  font-size: 0.88rem;
+  color: var(--color-brand-crimson);
+  font-weight: 650;
+  margin-bottom: 1rem;
+}
+
+[data-theme="dark"] .activity-organizer {
+  color: #ff7d86;
+}
+
+.activity-summary-text {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.activity-topics-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.activity-topic-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+}
+
+.activity-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.btn-watch-youtube {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-pill);
+  background: #c4302b;
+  color: #ffffff !important;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-watch-youtube:hover {
+  background: #a8241f;
+  transform: translateY(-1px);
+  color: #ffffff !important;
+}
+
+.btn-event-anniversary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-primary);
+  color: #ffffff !important;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-event-anniversary:hover {
+  background: var(--color-brand-accent);
+  color: #071913 !important;
+  transform: translateY(-1px);
+}
+
+/* Grilla de Actividades Adicionales (Gates Notes Cards) */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.activity-card-gates {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.activity-card-gates:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-brand-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.activity-card-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bg-subtle);
+}
+
+.activity-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.activity-card-gates:hover .activity-card-thumb img {
+  transform: scale(1.04);
+}
+
+.activity-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.activity-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 650;
+  color: var(--text-main);
+  line-height: 1.35;
+  margin: 0.4rem 0 0.6rem;
+}
+
+.activity-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.activity-card-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos y Seminarios de Posgrado · DataLab Cinvestav</title>
+  <meta name="description" content="Catálogo de materias de maestría y doctorado en Ciencias de la Computación impartidas por DataLab en Cinvestav Zacatenco.">
+  <meta name="theme-color" content="#0f3d32">
+
+  <link rel="icon" type="image/png" href="./cinvestav-logo.png">
+
+  <!-- Tipografía Editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,550;0,9..40,650;0,9..40,700;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- Barra Institucional -->
+  <div class="institution-bar">
+    <div class="container">
+      <div style="display:flex; align-items:center; gap:1.2rem;">
+        <a href="https://www.cinvestav.mx/" target="_blank" rel="noopener noreferrer">Cinvestav</a>
+        <span style="opacity:0.4;">·</span>
+        <a href="https://wwwcs.cs.cinvestav.mx/" target="_blank" rel="noopener noreferrer">Departamento de Computación</a>
+        <span style="opacity:0.4;">·</span>
+        <a href="index.html">DataLab Cinvestav</a>
+      </div>
+      <div>
+        <span style="color:#7ca394; font-size:0.75rem;">Docencia de Posgrado</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="index.html" class="brand-wrapper">
+          <img src="./cinvestav-logo.png" alt="Cinvestav" class="brand-logo-img" width="130" height="46">
+          <div class="brand-identity">
+            <span class="brand-title">Data<span class="accent">Lab</span></span>
+            <span class="brand-subtitle">Cursos de Posgrado</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio DataLab</a></li>
+          <li><a href="investigacion.html" class="nav-link">Investigación</a></li>
+          <li><a href="datasets.html" class="nav-link">Datasets (18)</a></li>
+          <li><a href="publicaciones.html" class="nav-link">Publicaciones</a></li>
+          <li><a href="graduados.html" class="nav-link">Graduados (37)</a></li>
+          <li><a href="cursos.html" class="nav-link active">Cursos (10)</a></li>
+          <li><a href="dra-xiaoou-li.html" class="nav-link">Dra. Xiaoou Li (CV)</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="btn-theme-toggle" id="theme-toggle-btn" aria-label="Cambiar tema">
+            <!-- Inyectado por JS -->
+          </button>
+          <a href="https://wwwcs.cs.cinvestav.mx/" target="_blank" rel="noopener noreferrer" class="btn-cta-contact">
+            Admisión Cinvestav
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+        
+          <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumb-bar" aria-label="Ruta de navegación">
+        <a href="index.html">DataLab Cinvestav</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Cursos y Seminarios de Posgrado</span>
+      </nav>
+    </div>
+
+    <!-- Hero de Cursos -->
+    <section class="container" style="padding: 2.5rem 0 3.5rem;">
+      <div style="max-width:860px; margin-bottom:2.5rem;">
+        <span class="section-eyebrow">
+          <span class="shape shape-bar" style="margin-right:0.4rem; background-color:var(--color-brand-crimson);"></span>
+          Formación Académica Avanzada
+        </span>
+        <h1 class="section-title" style="font-size:clamp(2.2rem, 3.8vw, 3rem); margin:0.4rem 0 1rem;">
+          Cursos y Seminarios de Maestría y Doctorado
+        </h1>
+        <p class="section-desc" style="font-size:1.05rem; line-height:1.7;">
+          Oferta académica en el Departamento de Computación de Cinvestav. Los cursos combinan el rigor matemático de los fundamentos algorítmicos con talleres experimentales y computacionales de vanguardia.
+        </p>
+      </div>
+
+      <!-- Grid de los 10 Cursos con portadas WebP -->
+      <div class="courses-grid" id="courses-grid-container" style="margin-bottom:4rem;">
+        <!-- Inyectado por app.js -->
+      </div>
+
+      <!-- Información sobre Posgrados Cinvestav -->
+      <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:2.5rem; display:grid; grid-template-columns:1.5fr 1fr; gap:2.5rem; align-items:center; box-shadow:var(--shadow-sm);">
+        <div>
+          <span class="section-eyebrow">Convocatoria de Posgrado</span>
+          <h2 style="font-family:var(--font-serif); font-size:1.8rem; margin:0.3rem 0 1rem;">¿Deseas estudiar tu Maestría o Doctorado en DataLab?</h2>
+          <p style="font-size:0.95rem; color:var(--text-muted); line-height:1.65; margin-bottom:1.5rem;">
+            El Departamento de Computación de Cinvestav ofrece programas de posgrado de excelencia con reconocimiento del Sistema Nacional de Posgrados (SNP / CONAHCYT), con becas para estudiantes dedicados de tiempo completo a la investigación científica.
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="https://wwwcs.cs.cinvestav.mx/" target="_blank" rel="noopener noreferrer" class="btn-cta-contact" style="font-size:0.88rem; padding:0.6rem 1.25rem;">
+              Convocatoria Oficial Cinvestav
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+            <a href="mailto:lixo@cs.cinvestav.mx" class="badge-link" style="padding:0.6rem 1.15rem; font-size:0.85rem;">
+              Contactar a la Dirección
+            </a>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-subtle); padding:1.75rem; border-radius:var(--radius-md); border-left:4px solid var(--color-brand-accent);">
+          <strong style="display:block; font-size:1.05rem; color:var(--text-main); margin-bottom:0.6rem;">Áreas de Especialización:</strong>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.88rem; color:var(--text-muted);">
+            <li><span class="shape shape-dot" style="margin-right:0.4rem; color:var(--color-brand-accent);"></span> Inteligencia Artificial y Machine Learning</li>
+            <li><span class="shape shape-dot" style="margin-right:0.4rem; color:var(--color-brand-accent);"></span> Sistemas Sostenibles FEW-AI</li>
+            <li><span class="shape shape-dot" style="margin-right:0.4rem; color:var(--color-brand-accent);"></span> Minería de Datos y Big Data</li>
+            <li><span class="shape shape-dot" style="margin-right:0.4rem; color:var(--color-brand-accent);"></span> Robótica e Interacción Humano–Robot</li>
+            <li><span class="shape shape-dot" style="margin-right:0.4rem; color:var(--color-brand-accent);"></span> Redes de Petri y Sistemas Discretos</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Data<span style="color:var(--color-brand-accent);">Lab</span></h3>
+          <p>
+            Laboratorio de Ciencia de Datos<br>
+            Departamento de Computación · Cinvestav Zacatenco<br>
+            Ciudad de México, México.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Portal DataLab</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Inicio del Laboratorio</a></li>
+            <li><a href="investigacion.html">Líneas de Investigación</a></li>
+            <li><a href="datasets.html">18 Datasets Abiertos</a></li>
+            <li><a href="graduados.html">37 Tesis de Posgrado</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto Académico</h4>
+          <p style="font-size:0.88rem; line-height:1.6; margin-bottom:0.8rem;">
+            Dra. Xiaoou Li<br>
+            <a href="mailto:lixo@cs.cinvestav.mx" style="color:var(--color-brand-accent); font-weight:600;">lixo@cs.cinvestav.mx</a>
+          </p>
+          <p style="font-size:0.82rem; color:#859e95;">
+            Av. IPN 2508, Zacatenco, GAM, CDMX · 07360
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Cinvestav · DataLab Docencia</div>
+        <div><a href="index.html">← Volver al Inicio DataLab</a></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

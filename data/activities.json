@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ia-humana-2026",
+    "title": "Inteligencia artificial e inteligencia humana: ¿Qué debemos formar cuando la máquina tiene todas las respuestas?",
+    "event": "Ciclo de Conferencias de IA · Sesión 10",
+    "organizer": "Secretaría de Ciencia, Humanidades, Tecnología e Innovación (Secihti)",
+    "date": "29 de Octubre de 2026",
+    "year": 2026,
+    "category": "talk",
+    "categoryLabel": "Conferencia Magistral",
+    "type": "video",
+    "videoUrl": "https://www.youtube.com/live/zPbdTXAXt4M",
+    "youtubeId": "zPbdTXAXt4M",
+    "image": "./assets/images/talk-ia-humana-2026.jpg",
+    "featured": true,
+    "summary": "Conferencia magistral impartida por la Dra. Xiaoou Li en el Ciclo Nacional de Conferencias de IA. Analiza las transformaciones cognitivas en el posgrado, el valor irreemplazable del pensamiento crítico y qué competencias científicas deben desarrollarse cuando los modelos generativos resuelven tareas computacionales complejas.",
+    "topics": ["Educación Superior", "Modelos Generativos", "Filosofía de la IA", "Posgrado Científico"]
+  },
+  {
+    "id": "computacion-20-aniversario-2026",
+    "title": "Celebración del 20° Aniversario del Departamento de Computación (2006–2026)",
+    "event": "XX Aniversario Cinvestav Computación",
+    "organizer": "Departamento de Computación · Cinvestav Zacatenco",
+    "date": "21–25 de Septiembre de 2026",
+    "year": 2026,
+    "category": "event",
+    "categoryLabel": "Evento Conmemorativo",
+    "type": "event",
+    "videoUrl": "https://xxaniversario.cs.cinvestav.mx/",
+    "image": "./assets/images/events/computacion-20-aniversario-2026.jpg",
+    "featured": true,
+    "summary": "Celebración del XX Aniversario del Departamento de Computación de Cinvestav. Dos décadas forjando ciencia computacional de vanguardia, posgrados de excelencia en el SNP de CONAHCYT e investigación de alto impacto en ciencia de datos, inteligencia artificial y sistemas complejos.",
+    "topics": ["20 Años (2006–2026)", "Conferencias Magistrales", "Paneles de Egresados", "Auditorio Jorge Suárez"]
+  }
+]

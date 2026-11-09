@@ -1,0 +1,130 @@
+{
+  "lab": {
+    "name": "DataLab Cinvestav",
+    "fullName": "Laboratorio de Ciencia de Datos",
+    "institution": "Centro de Investigación y de Estudios Avanzados (Cinvestav)",
+    "department": "Departamento de Computación",
+    "director": {
+      "name": "Dra. Xiaoou Li",
+      "title": "Directora del Laboratorio de Ciencia de Datos",
+      "department": "Departamento de Computación, Cinvestav",
+      "email": "lixo@cs.cinvestav.mx",
+      "image": "./assets/images/xiaoou-li-profile.jpg",
+      "bio": "Investigadora titular en el Departamento de Computación del Cinvestav Zacatenco. Especialista en Aprendizaje Automático, Redes Neuronales, Redes de Petri, y su aplicación en la sostenibilidad alimentaria, energética e hídrica (FEW-AI).",
+      "scholarUrl": "https://scholar.google.com/citations?user=xiaoou-li"
+    },
+    "location": {
+      "campus": "Cinvestav · Unidad Zacatenco",
+      "address": "Av. Instituto Politécnico Nacional 2508, San Pedro Zacatenco, Gustavo A. Madero, Ciudad de México, C.P. 07360",
+      "email": "lixo@cs.cinvestav.mx"
+    },
+    "stats": {
+      "yearsActive": "20+",
+      "phdGraduates": 7,
+      "mastersGraduates": 30,
+      "totalTheses": 37,
+      "datasetsCount": 18,
+      "publicationsCount": "60+",
+      "coursesCount": 10
+    }
+  },
+  "researchAreas": [
+    {
+      "id": "machine-learning",
+      "name": "Aprendizaje Automático y Redes Neuronales",
+      "short": "Machine Learning",
+      "badge": "IA Avanzada",
+      "description": "Modelado predictivo, echo state networks, aprendizaje por transferencia multiobjetivo y algoritmos bioinspirados para series temporales complejas.",
+      "keywords": ["Echo State Networks", "NSGA-III", "Transfer Learning", "ARIMA Neural Fusion", "GANs"]
+    },
+    {
+      "id": "few-ai",
+      "name": "Sistemas Inteligentes & Sostenibilidad (FEW-AI)",
+      "short": "FEW-AI Sostenibilidad",
+      "badge": "Insignia CONAHCYT",
+      "description": "Inteligencia artificial aplicada al nexo Alimentos-Energía-Agua (Food-Energy-Water). Modelos predictivos del clima, redes eléctricas y uso agrícola.",
+      "keywords": ["Alimentos", "Energía", "Agua", "Clima", "Red Eléctrica CENACE", "CIMMYT"]
+    },
+    {
+      "id": "robotics-hri",
+      "name": "Robótica e Interacción Humano–Robot",
+      "short": "Robótica & HRI",
+      "badge": "Control y Robótica",
+      "description": "Control cooperativo distribuido, celdas de ensamble flexible y aprendizaje por refuerzo profundo para interacción física y colaborativa humano-robot.",
+      "keywords": ["Deep RL", "HRI", "Celdas Flexibles", "Control Cooperativo", "Robótica Industrial"]
+    },
+    {
+      "id": "petri-data",
+      "name": "Redes de Petri, Big Data y Minería de Datos",
+      "short": "Redes de Petri & Big Data",
+      "badge": "Modelado Formal",
+      "description": "Modelado formal de sistemas de eventos discretos, verificación de bases de reglas activas y fragmentación dinámica de grandes volúmenes de información.",
+      "keywords": ["Redes de Petri Coloreadas", "Sistemas Dinámicos", "Minería de Datos", "HPC Trace"]
+    }
+  ],
+  "featuredStories": [
+    {
+      "id": "aniversario-computacion-2026",
+      "eyebrow": "Hito Histórico · 2026",
+      "tag": "Institucional",
+      "title": "20 años de Computación en Cinvestav: dos décadas forjando ciencia y tecnología de vanguardia",
+      "summary": "Conmemoración de dos décadas de excelencia académica en posgrado e investigación computacional, conectando la teoría algorítmica con las necesidades cruciales de México.",
+      "date": "21–25 Septiembre 2026",
+      "readTime": "5 min de lectura",
+      "image": "./assets/images/events/computacion-20-aniversario-2026.jpg",
+      "type": "event"
+    },
+    {
+      "id": "few-ai-2025",
+      "eyebrow": "Investigación & Sostenibilidad",
+      "tag": "FEW-AI",
+      "title": "FEW-AI 2025: datos, inteligencia artificial y el nexo Alimentos–Energía–Agua",
+      "summary": "Encuentro multidisciplinario enfocado en cómo los modelos generativos y el análisis de big data impulsan la toma de decisiones agrícolas, energéticas e hídricas en América Latina.",
+      "date": "13–14 Octubre 2025",
+      "readTime": "6 min de lectura",
+      "image": "./assets/images/few-ai-2025-community.jpeg",
+      "type": "research"
+    },
+    {
+      "id": "ia-educacion-2024",
+      "eyebrow": "Ensayos & Reflexión",
+      "tag": "Educación e IA",
+      "title": "Inteligencia artificial y educación: transformaciones en la formación científica de posgrado",
+      "summary": "Perspectivas de la Dra. Xiaoou Li sobre el impacto de la IA generativa en la docencia de posgrado, el diseño curricular y la integridad en la investigación computacional.",
+      "date": "27 Mayo 2024",
+      "readTime": "4 min de lectura",
+      "image": "./assets/images/xiaoou-li.jpg",
+      "type": "essay"
+    }
+  ],
+  "projects": [
+    {
+      "title": "IA para sistemas sostenibles (FEW-AI)",
+      "period": "2023–2026",
+      "funding": "CONAHCYT · CF-2023-I-2614",
+      "summary": "Machine Learning and Big Data Analytics for Sustainable Food-Energy-Water Systems.",
+      "badge": "En Curso"
+    },
+    {
+      "title": "Modeling and Control for Human-Robot Interaction with Deep Reinforcement Learning",
+      "period": "2021–2024",
+      "funding": "Cinvestav · Colaboración Internacional",
+      "summary": "Control adaptativo de robots en entornos compartidos y seguros con humanos.",
+      "badge": "Concluido"
+    },
+    {
+      "title": "Semi-Active Control of Building Structures Based on SHM & Deep Learning",
+      "period": "2019–2023",
+      "funding": "Proyectos de Investigación Científica México-Italia",
+      "summary": "Monitoreo estructural y mitigación sísmica con redes de eco estado.",
+      "badge": "Concluido"
+    },
+    {
+      "title": "Dynamic Vertical Fragmentation in Databases Using Data Mining and Active Rules",
+      "period": "2015–2019",
+      "funding": "Cinvestav Computación",
+      "summary": "Optimización distribuida con redes de Petri coloreadas orientadas a objetos.",
+      "badge": "Concluido"
+    }
+  ]
+}

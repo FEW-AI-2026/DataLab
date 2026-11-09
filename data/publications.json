@@ -1,0 +1,490 @@
+[
+  {
+    "title": "Data-driven structural health monitoring through echo state network regression",
+    "year": 2025,
+    "type": "general",
+    "venue": "Information",
+    "citation": "Data-driven structural health monitoring through echo state network regression Xiaoou Li, Yingqin Zhu, and Wen Yu Information , 16(8):678, 2025.",
+    "doi": ""
+  },
+  {
+    "title": "A two-stage individual feedback nsga-iii for dynamic many-objective flexible job shop scheduling problem",
+    "year": 2025,
+    "type": "general",
+    "venue": "IEEE Transactions on Automation Science and Engineering",
+    "citation": "A two-stage individual feedback nsga-iii for dynamic many-objective flexible job shop scheduling problem Yi Feng, Yating Lin, Zhile Yang, Yunlang Xu, Di Li, Xiaoou Li, and Dongsheng Yang IEEE Transactions on Automation Science and Engineering , 22:1673–1683, 2025.",
+    "doi": ""
+  },
+  {
+    "title": "A multi-objective transfer learning framework for time series forecasting with concept echo state networks",
+    "year": 2025,
+    "type": "general",
+    "venue": "Neural Networks",
+    "citation": "A multi-objective transfer learning framework for time series forecasting with concept echo state networks Yingqin Zhu, Wen Yu, and Xiaoou Li Neural Networks , 186:107272, 2025.",
+    "doi": ""
+  },
+  {
+    "title": "Data-driven multiple arima through neural fusion for enhanced wind power prediction with missing data",
+    "year": 2025,
+    "type": "general",
+    "venue": "IEEE Access",
+    "citation": "Data-driven multiple arima through neural fusion for enhanced wind power prediction with missing data Xiaoou Li and Wen Yu IEEE Access , 13:142117–142128, 2025.",
+    "doi": ""
+  },
+  {
+    "title": "Time series forecasting with missing data using generative adversarial networks and bayesian inference",
+    "year": 2024,
+    "type": "general",
+    "venue": "Information",
+    "citation": "Time series forecasting with missing data using generative adversarial networks and bayesian inference Xiaoou Li Information , 15(4):222, 2024.",
+    "doi": ""
+  },
+  {
+    "title": "Optimal pd control using conditional gan and bayesian inference",
+    "year": 2024,
+    "type": "general",
+    "venue": "IEEE Access",
+    "citation": "Optimal pd control using conditional gan and bayesian inference Ivan Hernandez, Wen Yu, and Xiaoou Li IEEE Access , 12:48255–48265, 2024.",
+    "doi": ""
+  },
+  {
+    "title": "Neural networks with transfer learning and frequency decomposition for wind speed prediction with missing data",
+    "year": 2024,
+    "type": "general",
+    "venue": "Mathematics",
+    "citation": "Neural networks with transfer learning and frequency decomposition for wind speed prediction with missing data Xiaoou Li and Yingqin Zhu Mathematics , 12(8):1137, 2024.",
+    "doi": ""
+  },
+  {
+    "title": "A new spike membership function for the recognition and processing of spatiotemporal spike patterns",
+    "year": 2023,
+    "type": "general",
+    "venue": "Mathematics",
+    "citation": "A new spike membership function for the recognition and processing of spatiotemporal spike patterns Abigail María Elena Ramírez-Mendoza, Wen Yu, and Xiaoou Li Mathematics , 11(11):2525, 2023.",
+    "doi": ""
+  },
+  {
+    "title": "Triple-layer attention mechanism-based network embedding approach for anchor link identification",
+    "year": 2021,
+    "type": "general",
+    "venue": "Neural Computing and Applications",
+    "citation": "Triple-layer attention mechanism-based network embedding approach for anchor link identification Yao Li, Huiyuan Cui, Huilin Liu, and Xiaoou Li Neural Computing and Applications , 34(4):2811–2829, 2021.",
+    "doi": ""
+  },
+  {
+    "title": "Fast training of deep LSTM networks with guaranteed stability",
+    "year": 2021,
+    "type": "general",
+    "venue": "Neurocomputing",
+    "citation": "Fast training of deep LSTM networks with guaranteed stability Wen Yu, Jesus Gonzalez, and Xiaoou Li Neurocomputing , 422:85–94, 2021.",
+    "doi": ""
+  },
+  {
+    "title": "Stable bilateral teleoperation with phase transition and haptic feedback",
+    "year": 2021,
+    "type": "general",
+    "venue": "Journal of the Franklin Institute",
+    "citation": "Stable bilateral teleoperation with phase transition and haptic feedback Edgar Estrada, Wen Yu, and Xiaoou Li Journal of the Franklin Institute , 358(3):1940–1956, 2021.",
+    "doi": ""
+  },
+  {
+    "title": "Anomaly detection of power consumption in yarn spinning",
+    "year": 2021,
+    "type": "general",
+    "venue": "Computers &amp; Industrial Engineering",
+    "citation": "Anomaly detection of power consumption in yarn spinning Chuqiao Xu, Junliang Wang, Jie Zhang, and Xiaoou Li Computers &amp; Industrial Engineering , 152:107015, 2021.",
+    "doi": ""
+  },
+  {
+    "title": "Optimum design of a parallel robot using neuro-genetic algorithm",
+    "year": 2021,
+    "type": "general",
+    "venue": "Journal of Mechanical Science and Technology",
+    "citation": "Optimum design of a parallel robot using neuro-genetic algorithm Erick García López, Wen Yu, and Xiaoou Li Journal of Mechanical Science and Technology , 35(1):293–305, 2021.",
+    "doi": ""
+  },
+  {
+    "title": "Energy consumption prediction of a CNC machining process with incomplete data",
+    "year": 2021,
+    "type": "general",
+    "venue": "IEEE/CAA Journal of Automatica Sinica",
+    "citation": "Energy consumption prediction of a CNC machining process with incomplete data Jian Pan, Congbo Li, Ying Tang, Wei Li, and Xiaoou Li IEEE/CAA Journal of Automatica Sinica , 8(5):987–1000, 2021.",
+    "doi": ""
+  },
+  {
+    "title": "Fuzzy identification of systems based on adaptive neurons",
+    "year": 2021,
+    "type": "general",
+    "venue": "Journal of Intelligent &amp; Fuzzy Systems",
+    "citation": "Fuzzy identification of systems based on adaptive neurons Abigail María Elena Ramírez-Mendoza, Wen Yu, and Xiaoou Li Journal of Intelligent &amp; Fuzzy Systems , 40(6):10767–10779, 2021.",
+    "doi": ""
+  },
+  {
+    "title": "Nonlinear control using human behavior learning",
+    "year": 2021,
+    "type": "general",
+    "venue": "Information Sciences",
+    "citation": "Nonlinear control using human behavior learning Adolfo Perrusquía, Wen Yu, and Xiaoou Li Information Sciences , 569:358–375, 2021.",
+    "doi": ""
+  },
+  {
+    "title": "A novel fuzzy system with adaptive neurons for earthquake modeling",
+    "year": 2020,
+    "type": "general",
+    "venue": "IEEE Access",
+    "citation": "A novel fuzzy system with adaptive neurons for earthquake modeling Abigail M. E. Ramirez-Mendoza, Wen Yu, and Xiaoou Li IEEE Access , 8:101369–101376, 2020.",
+    "doi": ""
+  },
+  {
+    "title": "Deformable convolutional networks for wafer defect pattern recognition",
+    "year": 2020,
+    "type": "general",
+    "venue": "IEEE Transactions on Semiconductor Manufacturing",
+    "citation": "Deformable convolutional networks for wafer defect pattern recognition Junliang Wang, Chuqiao Xu, Zhengliang Yang, Jie Zhang, and Xiaoou Li IEEE Transactions on Semiconductor Manufacturing , 33(4):587–596, 2020.",
+    "doi": ""
+  },
+  {
+    "title": "Multi-agent reinforcement learning for redundant robot control in task-space",
+    "year": 2020,
+    "type": "general",
+    "venue": "International Journal of Machine Learning and Cybernetics",
+    "citation": "Multi-agent reinforcement learning for redundant robot control in task-space Adolfo Perrusquía, Wen Yu, and Xiaoou Li International Journal of Machine Learning and Cybernetics , 12(1):231–241, 2020.",
+    "doi": ""
+  },
+  {
+    "title": "Stability and transparency of delayed bilateral teleoperation with haptic feedback",
+    "year": 2019,
+    "type": "general",
+    "venue": "International Journal of Applied Mathematics and Computer Science",
+    "citation": "Stability and transparency of delayed bilateral teleoperation with haptic feedback Edgar Estrada, Wen Yu, and Xiaoou Li International Journal of Applied Mathematics and Computer Science , 29(4):681–692, 2019.",
+    "doi": ""
+  },
+  {
+    "title": "Discrete-time sliding mode for building structure vibration control",
+    "year": 2018,
+    "type": "general",
+    "venue": "Transactions of the Institute of Measurement and Control",
+    "citation": "Discrete-time sliding mode for building structure vibration control Satyam Paul, Wen Yu, and Xiaoou Li Transactions of the Institute of Measurement and Control , 41(2):433–446, 2018.",
+    "doi": ""
+  },
+  {
+    "title": "Bidirectional active control of structures with type-2 fuzzy PD and PID",
+    "year": 2018,
+    "type": "general",
+    "venue": "International Journal of Systems Science",
+    "citation": "Bidirectional active control of structures with type-2 fuzzy PD and PID Satyam Paul, Wen Yu, and Xiaoou Li International Journal of Systems Science , 49(4):766–782, 2018.",
+    "doi": ""
+  },
+  {
+    "title": "Numerical solution of fuzzy equations with z-numbers using neural networks",
+    "year": 2018,
+    "type": "general",
+    "venue": "Intelligent Automation and Soft Computing",
+    "citation": "Numerical solution of fuzzy equations with z-numbers using neural networks Raheleh Jafari, Wen Yu, and Xiaoou Li Intelligent Automation and Soft Computing , 24(1):151–158, 2018.",
+    "doi": ""
+  },
+  {
+    "title": "Numerical solution of fuzzy differential equations with z-numbers",
+    "year": 2017,
+    "type": "general",
+    "venue": "International Journal of Computational Intelligence Systems",
+    "citation": "Numerical solution of fuzzy differential equations with z-numbers Raheleh Jafari, Wen Yu, Xiaoou Li, and Sina Razvarz International Journal of Computational Intelligence Systems , 10(1):1226, 2017.",
+    "doi": ""
+  },
+  {
+    "title": "Fuzzy differential equations for nonlinear system modeling",
+    "year": 2017,
+    "type": "general",
+    "venue": "IEEE Access",
+    "citation": "Fuzzy differential equations for nonlinear system modeling Raheleh Jafari, Wen Yu, and Xiaoou Li IEEE Access , 4:9428–9436, 2017.",
+    "doi": ""
+  },
+  {
+    "title": "Active rule base development for dynamic vertical partitioning of databases",
+    "year": 2017,
+    "type": "general",
+    "venue": "Journal of Intelligent Information Systems",
+    "citation": "Active rule base development for dynamic vertical partitioning of databases Lisbeth Rodríguez-Mazahua, et al Journal of Intelligent Information Systems , 48(2):421–451, 2017.",
+    "doi": ""
+  },
+  {
+    "title": "Structural health monitoring of building structures with online data mining",
+    "year": 2016,
+    "type": "general",
+    "venue": "IEEE Systems Journal",
+    "citation": "Structural health monitoring of building structures with online data mining Xiaoou Li, Wen Yu, and Salvador Villegas IEEE Systems Journal , 10(3):1291–1300, 2016.",
+    "doi": ""
+  },
+  {
+    "title": "Robot trajectory generation using modified hidden markov models",
+    "year": 2016,
+    "type": "general",
+    "venue": "Engineering Applications of Artificial Intelligence",
+    "citation": "Robot trajectory generation using modified hidden markov models Javier Garrido, Wen Yu, and Xiaoou Li Engineering Applications of Artificial Intelligence , 53:32–40, 2016.",
+    "doi": ""
+  },
+  {
+    "title": "Recent advances in bidirectional modeling and structural control",
+    "year": 2016,
+    "type": "general",
+    "venue": "Shock and Vibration",
+    "citation": "Recent advances in bidirectional modeling and structural control Satyam Paul, Wen Yu, and Xiaoou Li Shock and Vibration , 2016:1–17, 2016.",
+    "doi": ""
+  },
+  {
+    "title": "Modular design and control of an upper limb exoskeleton",
+    "year": 2016,
+    "type": "general",
+    "venue": "Journal of Mechanical Science and Technology",
+    "citation": "Modular design and control of an upper limb exoskeleton Javier Garrido, Wen Yu, and Xiaoou Li Journal of Mechanical Science and Technology , 30(5):2265–2271, 2016.",
+    "doi": ""
+  },
+  {
+    "title": "A low-cost ball and plate system for advanced control education",
+    "year": 2015,
+    "type": "general",
+    "venue": "The International Journal of Electrical Engineering &amp; Education",
+    "citation": "A low-cost ball and plate system for advanced control education Carlos Parga, Wen Yu, and Xiaoou Li The International Journal of Electrical Engineering &amp; Education , 52(4):370–384, 2015.",
+    "doi": ""
+  },
+  {
+    "title": "Support vector machine classification for large datasets using decision tree and fisher linear discriminant",
+    "year": 2014,
+    "type": "general",
+    "venue": "Future Generation Computer Systems",
+    "citation": "Support vector machine classification for large datasets using decision tree and fisher linear discriminant Asdrúbal López Chau, Xiaoou Li, and Wen Yu Future Generation Computer Systems , 36:57–65, 2014.",
+    "doi": ""
+  },
+  {
+    "title": "Imbalanced data classification via support vector machines and genetic algorithms",
+    "year": 2014,
+    "type": "general",
+    "venue": "Connection Science",
+    "citation": "Imbalanced data classification via support vector machines and genetic algorithms Jair Cervantes, Xiaoou Li, and Wen Yu Connection Science , 26(4):335–348, 2014.",
+    "doi": ""
+  },
+  {
+    "title": "Fast support vector machine classification for large data sets",
+    "year": 2014,
+    "type": "general",
+    "venue": "International Journal of Computational Intelligence Systems",
+    "citation": "Fast support vector machine classification for large data sets Xiaoou Li and Wen Yu International Journal of Computational Intelligence Systems , 7(2):197, 2014.",
+    "doi": ""
+  },
+  {
+    "title": "On-line modeling via fuzzy support vector machines and neural networks",
+    "year": 2013,
+    "type": "general",
+    "venue": "Journal of Intelligent &amp; Fuzzy Systems",
+    "citation": "On-line modeling via fuzzy support vector machines and neural networks Xiaoou Li, Wen Yu, and Xiaoli Li Journal of Intelligent &amp; Fuzzy Systems , 24(3):665–675, 2013.",
+    "doi": ""
+  },
+  {
+    "title": "Convex and concave hulls for classification with support vector machine",
+    "year": 2013,
+    "type": "general",
+    "venue": "Neurocomputing",
+    "citation": "Convex and concave hulls for classification with support vector machine Asdrúbal López Chau, Xiaoou Li, and Wen Yu Neurocomputing , 122:198–209, 2013.",
+    "doi": ""
+  },
+  {
+    "title": "A novel PID tuning method for robot control",
+    "year": 2013,
+    "type": "general",
+    "venue": "Industrial Robot: An International Journal",
+    "citation": "A novel PID tuning method for robot control Wen Yu, Xiaoou Li, and Roberto Carmona Industrial Robot: An International Journal , 40(6):574–582, 2013.",
+    "doi": ""
+  },
+  {
+    "title": "Stable neural pid anti-swing control for an overhead crane",
+    "year": 2013,
+    "type": "general",
+    "venue": "Intelligent Automation &amp; Soft Computing",
+    "citation": "Stable neural pid anti-swing control for an overhead crane Wen Yu, Xiaoou Li, and Francisco Panuncio Intelligent Automation &amp; Soft Computing , 20(2):145–158, 2013.",
+    "doi": ""
+  },
+  {
+    "title": "Large data sets classification using convex–concave hull and support vector machine",
+    "year": 2012,
+    "type": "general",
+    "venue": "Soft Computing",
+    "citation": "Large data sets classification using convex–concave hull and support vector machine Asdrúbal López Chau, Xiaoou Li, and Wen Yu Soft Computing , 17(5):793–804, 2012.",
+    "doi": ""
+  },
+  {
+    "title": "Fast classification for large data sets via random selection clustering and support vector machines",
+    "year": 2012,
+    "type": "general",
+    "venue": "Intelligent Data Analysis",
+    "citation": "Fast classification for large data sets via random selection clustering and support vector machines Xiaoou Li, Jair Cervantes, and Wen Yu Intelligent Data Analysis , 16(6):897–914, 2012.",
+    "doi": ""
+  },
+  {
+    "title": "Structural health monitoring of tall buildings with numerical integrator",
+    "year": 2012,
+    "type": "general",
+    "venue": "Mathematical Problems in Engineering",
+    "citation": "Structural health monitoring of tall buildings with numerical integrator Suresh Thenozhi, Wen Yu, Asdrúbal López Chau, and Xiaoou Li Mathematical Problems in Engineering , 2012:1–15, 2012.",
+    "doi": ""
+  },
+  {
+    "title": "Anti-swing control for an overhead crane with fuzzy compensation",
+    "year": 2012,
+    "type": "general",
+    "venue": "Intelligent Automation &amp; Soft Computing",
+    "citation": "Anti-swing control for an overhead crane with fuzzy compensation Xiaoou Li and Wen Yu Intelligent Automation &amp; Soft Computing , 18(1):1–11, 2012.",
+    "doi": ""
+  },
+  {
+    "title": "Two-stage neural sliding-mode control of magnetic levitation",
+    "year": 2011,
+    "type": "general",
+    "venue": "Neural Computing and Applications",
+    "citation": "Two-stage neural sliding-mode control of magnetic levitation Wen Yu, Panuncio Cruz Francisco, and Xiaoou Li Neural Computing and Applications , 20(8):1141–1147, 2011.",
+    "doi": ""
+  },
+  {
+    "title": "Automated nonlinear system modelling with multiple neural networks",
+    "year": 2011,
+    "type": "general",
+    "venue": "International Journal of Systems Science",
+    "citation": "Automated nonlinear system modelling with multiple neural networks Wen Yu, Kang Li, and Xiaoou Li International Journal of Systems Science , 42(10):1683–1695, 2011.",
+    "doi": ""
+  },
+  {
+    "title": "AUTOMATED NONLINEAR SYSTEM MODELING WITH MULTIPLE FUZZY NEURAL NETWORKS",
+    "year": 2010,
+    "type": "general",
+    "venue": "International Journal of Neural Systems",
+    "citation": "AUTOMATED NONLINEAR SYSTEM MODELING WITH MULTIPLE FUZZY NEURAL NETWORKS WEN YU and XIAOOU LI International Journal of Neural Systems , 20(05):429–435, 2010.",
+    "doi": ""
+  },
+  {
+    "title": "Synchronization of ball and beam systems with neural compensation",
+    "year": 2010,
+    "type": "general",
+    "venue": "International Journal of Control, Automation and Systems",
+    "citation": "Synchronization of ball and beam systems with neural compensation Xiaoou Li and Wen Yu International Journal of Control, Automation and Systems , 8(3):491–496, 2010.",
+    "doi": ""
+  },
+  {
+    "title": "Online fuzzy modeling with structure and parameter learning",
+    "year": 2009,
+    "type": "general",
+    "venue": "Expert Systems with Applications",
+    "citation": "Online fuzzy modeling with structure and parameter learning Wen Yu and Xiaoou Li Expert Systems with Applications , 36(4):7484–7492, 2009.",
+    "doi": ""
+  },
+  {
+    "title": "Support vector machine classification via minimum enclosing ball clustering",
+    "year": 2008,
+    "type": "general",
+    "venue": "Neurocomputing",
+    "citation": "Support vector machine classification via minimum enclosing ball clustering Jair Cervantes, Xiaoou Li, Wen Yu, and Kang Li Neurocomputing , 71(4-6):611–619, 2008.",
+    "doi": ""
+  },
+  {
+    "title": "On-line fuzzy modeling via clustering and support vector machines",
+    "year": 2008,
+    "type": "general",
+    "venue": "Information Sciences",
+    "citation": "On-line fuzzy modeling via clustering and support vector machines Wen Yu and Xiaoou Li Information Sciences , 178(22):4264–4279, 2008.",
+    "doi": ""
+  },
+  {
+    "title": "Passivity analysis of dynamic neural networks with different time-scales",
+    "year": 2007,
+    "type": "general",
+    "venue": "Neural Processing Letters",
+    "citation": "Passivity analysis of dynamic neural networks with different time-scales Wen Yu and Xiaoou Li Neural Processing Letters , 25(2):143–155, 2007.",
+    "doi": ""
+  },
+  {
+    "title": "Applying petri nets in active database systems",
+    "year": 2007,
+    "type": "general",
+    "venue": "IEEE Transactions on Systems, Man and Cybernetics, Part C",
+    "citation": "Applying petri nets in active database systems Xiaoou Li, Joselito M. Medina, and Sergio V. Chapa IEEE Transactions on Systems, Man and Cybernetics, Part C , 37(4):482–493, 2007.",
+    "doi": ""
+  },
+  {
+    "title": "Fuzzy identification using fuzzy neural networks with stable learning algorithms",
+    "year": 2004,
+    "type": "general",
+    "venue": "IEEE Transactions on Fuzzy Systems",
+    "citation": "Fuzzy identification using fuzzy neural networks with stable learning algorithms W. Yu and X. Li IEEE Transactions on Fuzzy Systems , 12(3):411–420, 2004.",
+    "doi": ""
+  },
+  {
+    "title": "Discrete-time neuro identification without robust modification",
+    "year": 2003,
+    "type": "general",
+    "venue": "IEE Proceedings - Control Theory and Applications",
+    "citation": "Discrete-time neuro identification without robust modification W. Yu and X. Li IEE Proceedings - Control Theory and Applications , 150(3):311–316, 2003.",
+    "doi": ""
+  },
+  {
+    "title": "Dynamic system identification via recurrent multilayer perceptrons",
+    "year": 2002,
+    "type": "general",
+    "venue": "Information Sciences",
+    "citation": "Dynamic system identification via recurrent multilayer perceptrons Xiaoou Li and Wen Yu Information Sciences , 147(1-4):45–63, 2002.",
+    "doi": ""
+  },
+  {
+    "title": "Minimax control for discrete-time time-varying stochastic systems",
+    "year": 2002,
+    "type": "general",
+    "venue": "Automatica",
+    "citation": "Minimax control for discrete-time time-varying stochastic systems Xianping Guo, Wen Yu, and Xiaoou Li Automatica , 38(11):1991–1998, 2002.",
+    "doi": ""
+  },
+  {
+    "title": "Some stability properties of dynamic neural networks",
+    "year": 2001,
+    "type": "general",
+    "venue": "IEEE Transactions on Circuits and Systems I",
+    "citation": "Some stability properties of dynamic neural networks Wen Yu and Xiaoou Li IEEE Transactions on Circuits and Systems I , 48(2):256–259, 2001.",
+    "doi": ""
+  },
+  {
+    "title": "Multilayer dynamic neural networks for non-linear system identification",
+    "year": 2001,
+    "type": "general",
+    "venue": "International Journal of Control",
+    "citation": "Multilayer dynamic neural networks for non-linear system identification Wen Yu, Alexander S. Poznyak, and Xiaoou Li International Journal of Control , 74(18):1858–1864, 2001.",
+    "doi": ""
+  },
+  {
+    "title": "Some new results on system identification with dynamic neural networks",
+    "year": 2001,
+    "type": "general",
+    "venue": "IEEE Transactions on Neural Networks",
+    "citation": "Some new results on system identification with dynamic neural networks Wen Yu and Xiaoou Li IEEE Transactions on Neural Networks , 12(2):412–417, 2001.",
+    "doi": ""
+  },
+  {
+    "title": "Observer-based neuro identifier",
+    "year": 2000,
+    "type": "general",
+    "venue": "IEE Proceedings - Control Theory and Applications",
+    "citation": "Observer-based neuro identifier W. Yu, X. Li, and M.A. Moreno IEE Proceedings - Control Theory and Applications , 147(2):145–152, 2000.",
+    "doi": ""
+  },
+  {
+    "title": "Dynamic knowledge inference and learning under adaptive fuzzy petri net framework",
+    "year": 2000,
+    "type": "general",
+    "venue": "IEEE Transactions on Systems, Man and Cybernetics, Part C",
+    "citation": "Dynamic knowledge inference and learning under adaptive fuzzy petri net framework Xiaoou Li, Wen Yu, and F. Lara-Rosano IEEE Transactions on Systems, Man and Cybernetics, Part C , 30(4):442–450, 2000.",
+    "doi": ""
+  },
+  {
+    "title": "Adaptive fuzzy petri nets for dynamic knowledge representation and inference",
+    "year": 2000,
+    "type": "general",
+    "venue": "Expert Systems with Applications",
+    "citation": "Adaptive fuzzy petri nets for dynamic knowledge representation and inference X. Li and F. Lara-Rosano Expert Systems with Applications , 19(3):235–241, 2000.",
+    "doi": ""
+  }
+]

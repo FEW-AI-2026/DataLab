@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada · 404 | DataLab Cinvestav</title>
+  <meta name="description" content="Página no encontrada en DataLab Cinvestav.">
+  <meta name="theme-color" content="#0f3d32">
+
+  <link rel="icon" type="image/png" href="./cinvestav-logo.png">
+
+  <!-- Tipografía Editorial (DM Sans + Newsreader) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,550;0,9..40,650;0,9..40,700;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- Barra Institucional -->
+  <div class="institution-bar">
+    <div class="container">
+      <div style="display:flex; align-items:center; gap:1.2rem;">
+        <a href="https://www.cinvestav.mx/" target="_blank" rel="noopener noreferrer">Cinvestav</a>
+        <span style="opacity:0.4;">·</span>
+        <a href="https://wwwcs.cs.cinvestav.mx/" target="_blank" rel="noopener noreferrer">Departamento de Computación</a>
+        <span style="opacity:0.4;">·</span>
+        <a href="index.html">DataLab Cinvestav</a>
+      </div>
+      <div>
+        <span style="color:#7ca394; font-size:0.75rem;">Error 404</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="index.html" class="brand-wrapper">
+          <img src="./cinvestav-logo.png" alt="Cinvestav" class="brand-logo-img" width="130" height="46">
+          <div class="brand-identity">
+            <span class="brand-title">Data<span class="accent">Lab</span></span>
+            <span class="brand-subtitle">Ciencia de Datos</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="investigacion.html" class="nav-link">Investigación</a></li>
+          <li><a href="actividades.html" class="nav-link">Actividades</a></li>
+          <li><a href="datasets.html" class="nav-link">Datasets (18)</a></li>
+          <li><a href="publicaciones.html" class="nav-link">Publicaciones</a></li>
+          <li><a href="graduados.html" class="nav-link">Graduados (37)</a></li>
+          <li><a href="dra-xiaoou-li.html" class="nav-link">Dra. Xiaoou Li (CV)</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="btn-theme-toggle" id="theme-toggle-btn" aria-label="Cambiar tema">
+            <!-- Inyectado por JS -->
+          </button>
+          <a href="contacto.html" class="btn-cta-contact">
+            Contacto
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+          <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main style="min-height:60vh; display:flex; align-items:center; padding: 4rem 0;">
+    <div class="container" style="text-align:center; max-width:680px;">
+      <span class="section-eyebrow" style="justify-content:center; display:inline-flex;">
+        <span class="shape shape-diamond" style="background-color:var(--color-brand-crimson); margin-right:0.4rem;"></span>
+        Error de Enlace
+      </span>
+      <h1 style="font-family:var(--font-serif); font-size:clamp(3rem, 6vw, 4.5rem); margin: 0.5rem 0 1rem; color:var(--text-main);">
+        404
+      </h1>
+      <h2 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--text-main); margin-bottom:1rem;">
+        Página no encontrada
+      </h2>
+      <p style="font-size:1.05rem; color:var(--text-muted); line-height:1.65; margin-bottom:2rem;">
+        La ruta solicitada no existe o ha sido reestructurada dentro de las nuevas secciones segmentadas del laboratorio DataLab.
+      </p>
+      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+        <a href="index.html" class="btn-cta-contact" style="padding:0.75rem 1.5rem; font-size:0.95rem;">
+          Volver a la página de inicio
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+        <a href="contacto.html" class="badge-link" style="padding:0.7rem 1.25rem; font-size:0.95rem;">
+          Ir a Contacto
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 Cinvestav · DataLab</div>
+        <div><a href="index.html">← Volver al Inicio</a></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

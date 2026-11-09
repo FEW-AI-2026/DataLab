@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataLab · Laboratorio de Ciencia de Datos | Cinvestav</title>
+  <meta name="description" content="Laboratorio de Ciencia de Datos del Departamento de Computación, Cinvestav. Investigación de frontera en IA, datasets abiertos, FEW-AI y formación científica de posgrado.">
+  <meta name="theme-color" content="#0f3d32">
+
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DataLab · Laboratorio de Ciencia de Datos | Cinvestav">
+  <meta property="og:description" content="Investigamos inteligencia artificial y sistemas sostenibles. Descubre nuestros datasets abiertos, publicaciones y proyectos.">
+  <meta property="og:image" content="./assets/images/few-ai-2025-community.jpeg">
+
+  <link rel="icon" type="image/png" href="./cinvestav-logo.png">
+
+  <!-- Tipografía Editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,550;0,9..40,650;0,9..40,700;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&display=swap" rel="stylesheet">
+
+  <!-- Estilos Centrales -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- 1. Barra Institucional Superior -->
+  <div class="institution-bar">
+    <div class="container">
+      <div style="display:flex; align-items:center; gap:1.2rem;">
+        <a href="https://www.cinvestav.mx/" target="_blank" rel="noopener noreferrer">
+          Centro de Investigación y de Estudios Avanzados (Cinvestav)
+        </a>
+        <span style="opacity:0.4;">·</span>
+        <a href="https://wwwcs.cs.cinvestav.mx/" target="_blank" rel="noopener noreferrer">
+          Departamento de Computación
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+      <div>
+        <span style="color:#7ca394; font-size:0.75rem;">Ciudad de México · Zacatenco</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Navegación Principal -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="index.html" class="brand-wrapper" aria-label="DataLab Cinvestav Inicio">
+          <img src="./cinvestav-logo.png" alt="Logo de Cinvestav" class="brand-logo-img" width="130" height="46">
+          <div class="brand-identity">
+            <span class="brand-title">Data<span class="accent">Lab</span></span>
+            <span class="brand-subtitle">Ciencia de Datos · Cinvestav</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="investigacion.html" class="nav-link">Investigación</a></li>
+          <li><a href="actividades.html" class="nav-link">Actividades</a></li>
+          <li><a href="datasets.html" class="nav-link">Datasets (18)</a></li>
+          <li><a href="publicaciones.html" class="nav-link">Publicaciones</a></li>
+          <li><a href="graduados.html" class="nav-link">Graduados (37)</a></li>
+          <li><a href="cursos.html" class="nav-link">Cursos</a></li>
+          <li><a href="dra-xiaoou-li.html" class="nav-link">Dra. Xiaoou Li (CV)</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="btn-theme-toggle" id="theme-toggle-btn" aria-label="Cambiar tema de color">
+            <!-- Icono inyectado por app.js -->
+          </button>
+
+          <a href="contacto.html" class="btn-cta-contact">
+            Contacto
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+
+          <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- 3. Hero Editorial (Gates Notes + Sean Carroll style) -->
+    <section class="hero-editorial">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Noticia / Hito Destacado Principal -->
+          <article class="featured-card">
+            <div class="featured-media">
+              <img src="./assets/images/events/computacion-20-aniversario-2026.jpg" alt="Conmemoración 20 años de Computación Cinvestav" width="800" height="450" loading="eager">
+              <span class="media-badge">Aniversario · 2026</span>
+            </div>
+            <div class="featured-content">
+              <div class="story-meta">
+                <span class="story-pill">
+                  <span class="shape shape-dot" style="margin-right:0.35rem;"></span>
+                  Hito Académico
+                </span>
+                <span>21–25 Septiembre 2026</span>
+                <span>·</span>
+                <span>5 min lectura</span>
+              </div>
+              <h1 class="featured-title">20 años de Computación en Cinvestav: dos décadas forjando ciencia de datos de vanguardia</h1>
+              <p class="featured-summary">
+                Desde los fundamentos de las redes neuronales y redes de Petri hasta la inteligencia artificial generativa aplicada a la sostenibilidad hídrica y energética. Celebramos la trayectoria de investigadores, doctores y maestros formados en nuestro laboratorio.
+              </p>
+              <div class="featured-footer">
+                <a href="graduados.html" class="link-read-more">
+                  Conoce nuestra historia y tesis
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Columna Lateral: Perfil de Dirección y Ensayos -->
+          <aside class="hero-aside">
+            <div class="aside-card director-card">
+              <div class="director-header">
+                <img src="./assets/images/xiaoou-li-profile.jpg" alt="Dra. Xiaoou Li" class="director-avatar" width="68" height="68">
+                <div>
+                  <h2 class="director-name">Dra. Xiaoou Li</h2>
+                  <p class="director-role">Directora de DataLab · Depto. de Computación</p>
+                </div>
+              </div>
+              <blockquote class="director-quote">
+                Investigamos inteligencia artificial con rigor metodológico para resolver retos de sostenibilidad en alimentos, energía y agua en México. Compartimos datos abiertos y formamos líderes científicos.
+              </blockquote>
+              <div class="director-links">
+                <a href="mailto:lixo@cs.cinvestav.mx" class="badge-link">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  lixo@cs.cinvestav.mx
+                </a>
+                <a href="https://scholar.google.com/citations?user=R9Td938AAAAJ" target="_blank" rel="noopener noreferrer" class="badge-link">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  Google Scholar
+                </a>
+                <span class="honor-badge gold" style="font-size:0.72rem; padding:0.2rem 0.6rem;">
+                  <span class="shape shape-diamond" style="background-color:var(--color-gold);"></span>
+                  SNII Nivel 3
+                </span>
+              </div>
+              <div style="margin-top: 1rem;">
+                <a href="dra-xiaoou-li.html" class="btn-cta-contact" style="width: 100%; justify-content: center; font-size: 0.84rem; padding: 0.6rem 1rem;">
+                  Ver Perfil Académico & CV Completo
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Historias Secundarias -->
+            <div class="aside-card">
+              <div class="sub-story-item">
+                <img src="./assets/images/few-ai-2025-community.jpeg" alt="Comunidad FEW-AI" class="sub-story-thumb" width="76" height="60" loading="lazy">
+                <div class="sub-story-info">
+                  <h4><a href="investigacion.html#few-ai">FEW-AI 2025: datos, IA y el nexo Alimentos–Energía–Agua</a></h4>
+                  <span class="meta">Encuentro Académico · 13–14 Octubre</span>
+                </div>
+              </div>
+              <div class="sub-story-item">
+                <img src="./assets/images/xiaoou-li.jpg" alt="Seminario de IA y Educación" class="sub-story-thumb" width="76" height="60" loading="lazy">
+                <div class="sub-story-info">
+                  <h4><a href="investigacion.html#educacion">Inteligencia artificial y educación de posgrado</a></h4>
+                  <span class="meta">Seminario & Ensayo · Cinvestav</span>
+                </div>
+              </div>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Franja de Métricas / Impacto (Límite visual del Index) -->
+    <div class="impact-strip">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Años de Investigación</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">7</div>
+            <div class="stat-label">Doctorados Graduados</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">30</div>
+            <div class="stat-label">Maestrías en Ciencias</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">18</div>
+            <div class="stat-label">Datasets Abiertos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">60+</div>
+            <div class="stat-label">Artículos JCR & Confs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Hub de Exploración a Páginas Segmentadas -->
+    <section class="portal-hub-section">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:2rem;">
+          <div>
+            <span class="section-eyebrow">
+              <span class="shape shape-bar" style="margin-right:0.4rem; background-color:var(--color-brand-crimson);"></span>
+              Exploración del Laboratorio
+            </span>
+            <h2 class="section-title">Portales y Recursos Especializados</h2>
+            <p class="section-desc">Accede a las secciones dedicadas del laboratorio para consultar datasets, publicaciones, tesis, proyectos y docencia.</p>
+          </div>
+        </div>
+
+        <div class="hub-grid">
+          
+          <article class="hub-card">
+            <div class="hub-card-header">
+              <span class="dataset-category-pill">Investigación</span>
+              <span class="shape shape-diamond" style="color:var(--color-brand-accent);"></span>
+            </div>
+            <h3 class="hub-card-title">Líneas & Proyectos FEW-AI</h3>
+            <p class="hub-card-desc">
+              Modelos de inteligencia artificial, series temporales, interacción humano–robot y el proyecto CONAHCYT de sostenibilidad hídrica y agrícola.
+            </p>
+            <div class="hub-card-footer">
+              <a href="investigacion.html" class="hub-link-cta">
+                Explorar investigación
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="hub-card">
+            <div class="hub-card-header">
+              <span class="dataset-category-pill">Recursos Abiertos</span>
+              <span class="shape shape-ring" style="color:var(--color-brand-primary);"></span>
+            </div>
+            <h3 class="hub-card-title">18 Datasets & Benchmarks</h3>
+            <p class="hub-card-desc">
+              Repositorio de datos científicos curados: agricultura, red eléctrica CENACE, calidad de aire CDMX, criptografía y biocomputación.
+            </p>
+            <div class="hub-card-footer">
+              <a href="datasets.html" class="hub-link-cta">
+                Ver repositorio de datos
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="hub-card">
+            <div class="hub-card-header">
+              <span class="dataset-category-pill">Publicaciones</span>
+              <span class="shape shape-square" style="color:var(--color-brand-crimson);"></span>
+            </div>
+            <h3 class="hub-card-title">Acervo Bibliográfico (60+)</h3>
+            <p class="hub-card-desc">
+              Artículos en revistas internacionales indexadas (IEEE, Elsevier, Springer) con buscador reactivo y exportador de citas BibTeX instantáneo.
+            </p>
+            <div class="hub-card-footer">
+              <a href="publicaciones.html" class="hub-link-cta">
+                Consultar publicaciones
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="hub-card">
+            <div class="hub-card-header">
+              <span class="dataset-category-pill">Formación</span>
+              <span class="shape shape-dot" style="color:var(--color-gold);"></span>
+            </div>
+            <h3 class="hub-card-title">Graduados y Tesis (37)</h3>
+            <p class="hub-card-desc">
+              Registro histórico de 7 disertaciones doctorales y 30 tesis de maestría en Ciencias (2002–2025), incluyendo premios nacionales.
+            </p>
+            <div class="hub-card-footer">
+              <a href="graduados.html" class="hub-link-cta">
+                Ver directorio de tesis
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="hub-card">
+            <div class="hub-card-header">
+              <span class="dataset-category-pill">Docencia</span>
+              <span class="shape shape-diamond" style="color:var(--color-brand-accent);"></span>
+            </div>
+            <h3 class="hub-card-title">Cursos de Posgrado (10)</h3>
+            <p class="hub-card-desc">
+              Catálogo de materias de maestría y doctorado en IA generativa, minería de datos, redes neuronales, redes de Petri y seminarios.
+            </p>
+            <div class="hub-card-footer">
+              <a href="cursos.html" class="hub-link-cta">
+                Ver materias y programas
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="hub-card">
+            <div class="hub-card-header">
+              <span class="dataset-category-pill">Dirección</span>
+              <span class="shape shape-ring" style="color:var(--color-brand-primary);"></span>
+            </div>
+            <h3 class="hub-card-title">Dra. Xiaoou Li (CV)</h3>
+            <p class="hub-card-desc">
+              Curriculum vitae académico, distinciones SNII 3, membresía en la AMC, proyectos financiados, cronología y producción científica.
+            </p>
+            <div class="hub-card-footer">
+              <a href="dra-xiaoou-li.html" class="hub-link-cta">
+                Consultar CV académico
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="hub-card">
+            <div class="hub-card-header">
+              <span class="dataset-category-pill">Divulgación</span>
+              <span class="shape shape-dot" style="color:var(--color-brand-crimson);"></span>
+            </div>
+            <h3 class="hub-card-title">Actividades & Charlas</h3>
+            <p class="hub-card-desc">
+              Conferencias magistrales (incluyendo su charla en vivo en YouTube con la Secihti), keynotes internacionales y foros públicos.
+            </p>
+            <div class="hub-card-footer">
+              <a href="actividades.html" class="hub-link-cta">
+                Ver charlas y videos
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 6. Pie de Página Institucional -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h3>Data<span style="color:var(--color-brand-accent);">Lab</span></h3>
+          <p>
+            Laboratorio de Ciencia de Datos<br>
+            Departamento de Computación<br>
+            Centro de Investigación y de Estudios Avanzados del IPN (Cinvestav)<br>
+            Ciudad de México, México.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Investigación & Datos</h4>
+          <ul class="footer-links-list">
+            <li><a href="investigacion.html">Líneas de Investigación</a></li>
+            <li><a href="investigacion.html#few-ai">Proyecto FEW-AI CONAHCYT</a></li>
+            <li><a href="datasets.html">18 Datasets Abiertos</a></li>
+            <li><a href="publicaciones.html">Publicaciones JCR</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Formación & Equipo</h4>
+          <ul class="footer-links-list">
+            <li><a href="graduados.html">37 Tesis de Posgrado</a></li>
+            <li><a href="cursos.html">Cursos de Posgrado</a></li>
+            <li><a href="dra-xiaoou-li.html">Dra. Xiaoou Li (CV)</a></li>
+            <li><a href="contacto.html">Contacto y Ubicación</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto Directo</h4>
+          <p style="font-size:0.88rem; line-height:1.6; margin-bottom:0.8rem;">
+            Dra. Xiaoou Li<br>
+            <a href="mailto:lixo@cs.cinvestav.mx" style="color:var(--color-brand-accent); font-weight:600;">lixo@cs.cinvestav.mx</a>
+          </p>
+          <p style="font-size:0.82rem; color:#859e95;">
+            Av. IPN 2508, Zacatenco, Gustavo A. Madero, CDMX, 07360.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Cinvestav · DataLab (Laboratorio de Ciencia de Datos). Todos los derechos reservados.
+        </div>
+        <div>
+          <a href="#">Volver arriba ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

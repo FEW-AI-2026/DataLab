@@ -1,0 +1,261 @@
+[
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Edgar Omar Mendoza López",
+    "topic": "Implementation of a quantum support vector machine with ZZ-type mapping"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Saul Jesus Rangel Popoca",
+    "topic": "Artificial intelligence algorithm for trajectory generation in a gait rehabilitation exoskeleton"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Yahel Jesús Cortés García",
+    "topic": "Implementation of a rehabilitation system in a virtual environment using a haptic device for the upper limb"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Doctorado",
+    "student": "Erick García López",
+    "topic": "Development of a bilateral rehabilitation system assisted by upper limb robots for patients with cerebrovascular disease (CVD)"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Vicente Adnan Duarte Méndez",
+    "topic": "Wind energy prediction using hybrid multiple ARIMA models"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Oscar Ramírez Ayala",
+    "topic": "Implementation of CNN deep learning algorithm for the identification of invasive plants using small data sets"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Doctorado",
+    "student": "Bella Citlali Martínez Seis",
+    "topic": "Use of attributes to detect quality communities in social networks"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Erick García López",
+    "topic": "Development of a bilateral rehabilitation system assisted by robots"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Gómez Rosal Dulce Adriana",
+    "topic": "Design and development of a hand gesture recognition system for UAV control"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Andrade Jiménez Yareli Licet",
+    "topic": "Preprocessing tool for tweets based on search-by-topic"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Pantoja Laces Williams Antonio",
+    "topic": "Bipedal robot walking generation through data analysis of human gait"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Rodríguez Molina Alejandro",
+    "topic": "3D rehabilitation system using a haptic device"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Hernández Petlachi Roberto Francisco",
+    "topic": "Sentiment Analysis of Spanish text based on semantic approximation"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Villegas Solís Salvador Abdelaziz",
+    "topic": "Structural Health Monitoring using data mining techniques"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Doctorado",
+    "student": "López Chau Asdrúbal",
+    "topic": "Data Reduction methods for large data classification using SVM Awarded First Place in the 37th National Thesis Competition"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Parga Villalpando Carlos",
+    "topic": "Human-machine interface development using Smartphone with application on robot control"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Sánchez Barreto Christian Onassis",
+    "topic": "An evolutionary approach for knowledge learning using fuzzy Petri nets"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Pérez Rivas Eduardo",
+    "topic": "OPCOLAPH: OLAP Query Optimization of distributed databases in clusters based on histograms"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Pico Villalpando Antonio",
+    "topic": "Design and implementation of a quadcopter control system"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Doctorado",
+    "student": "Rodríguez Mazahua Lisbeth",
+    "topic": "Dynamic vertical Partitioning of multimedia databases using active rules"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Villanueva Chávez Joel",
+    "topic": "Ontology-based framework for knowledge management in the ETL process"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Limeta Cabañas Alberto",
+    "topic": "A new model for predicting linkage of social networks"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Mejía Olivares Cristian Paolo",
+    "topic": "Large-scale social network analysis"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Doctorado",
+    "student": "Cervantes Canales Jair",
+    "topic": "Classification of large data sets using support vector machines and applications on biological systems"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Alvarado Sánchez Jorge Alberto",
+    "topic": "Access control system with Radio Frequency Identification (RFID)"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Doctorado",
+    "student": "Chavaría Báez Lorena",
+    "topic": "Verification and analysis of active rule-based systems"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Vázquez Tzompantzi Marisol",
+    "topic": "Automated decision making by ECA Fuzzy rules on an active Data Warehouse"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Hernández Valadez Edna",
+    "topic": "An entropy-based clustering algorithm for discovering groups with mixed-type attributes"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Millan Alonso Gildardo",
+    "topic": "Telecommunication networks traffic prediction using analytic intelligence techniques"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Palacios Hernández Francisco",
+    "topic": "CMAC neural nets as a classification model in data mining"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Garrido Daniel Samuel",
+    "topic": "Modeling workflow management systems using Conditional Colored Petri nets"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Doctorado",
+    "student": "Medina Marín Joselito",
+    "topic": "Development of ECA rules in active database systems: a Petri nets approach"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Chavaría Báez Lorena",
+    "topic": "ECA rule interaction complexity measurement"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Trujillo Ferrara José de Jesús",
+    "topic": "Deadlock Detection and Analysis of Distributed Database Systems"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Villaseñor Lozano Carlos Alejandro",
+    "topic": "Fuzzy neural modeling with stable learning algorithm"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Medina Marín Joselito",
+    "topic": "Conditional colored Petri nets and their applications in active database systems"
+  },
+  {
+    "year": 2025,
+    "degree": "",
+    "degree_label": "Maestría",
+    "student": "Perez Moo Sergio Antonio",
+    "topic": "Hybrid system modeling and control using fuzzy Petri nets and neural networks"
+  }
+]

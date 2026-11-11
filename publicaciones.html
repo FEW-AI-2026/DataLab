@@ -111,19 +111,25 @@
           </select>
         </div>
 
-        <div class="search-filter-box" style="width:340px;">
+        <div class="search-filter-box">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           <input type="text" id="pub-search-input" placeholder="Buscar por título, revista, ESN, Petri..." aria-label="Buscar publicación">
         </div>
       </div>
 
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; font-size:0.88rem; color:var(--text-muted);">
-        <span id="pubs-counter" style="font-weight:600;">Cargando publicaciones...</span>
-        <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-faint);">Búsqueda reactiva instantánea</span>
+      <div class="theses-stats-header" style="margin-bottom: 1.75rem;">
+        <span id="pubs-counter" style="font-size:0.9rem; font-weight:600; color:var(--text-muted);">Cargando publicaciones...</span>
+        <div class="theses-meta-controls">
+          <button type="button" class="btn-sort-order is-desc" id="pubs-sort-btn" aria-label="Cambiar orden cronológico de publicaciones">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            <span>2025 → 2000</span>
+          </button>
+          <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-faint);">Búsqueda reactiva instantánea</span>
+        </div>
       </div>
 
-      <!-- Lista de Publicaciones Dinámica (app.js) -->
-      <div class="publications-list" id="publications-list-container"></div>
+      <!-- Timeline dinámico de publicaciones (app.js) -->
+      <div class="theses-timeline-shell" id="publications-list-container"></div>
 
     </section>
 

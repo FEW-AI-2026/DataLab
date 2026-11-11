@@ -20,6 +20,7 @@
     datasetSearchQuery: '',
     pubSearchQuery: '',
     pubYearFilter: 'all',
+    pubSortOrder: 'desc',
     thesisSearchQuery: '',
     thesisSortOrder: 'asc'
   };
@@ -242,13 +243,93 @@
   /* ==========================================================================
      5. Publicaciones Científicas (Render, Búsqueda y BibTeX)
      ========================================================================== */
+  function normalizeSearchText(str) {
+    return (str || '')
+      .toString()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  function bindSortButton(buttonId, stateKey, ascLabel, descLabel, onToggle) {
+    const sortBtn = document.getElementById(buttonId);
+    if (!sortBtn) return;
+
+    const syncButton = () => {
+      const isDesc = state[stateKey] === 'desc';
+      sortBtn.classList.toggle('is-desc', isDesc);
+      const label = sortBtn.querySelector('span');
+      if (label) {
+        label.textContent = isDesc ? descLabel : ascLabel;
+      }
+    };
+
+    syncButton();
+    sortBtn.addEventListener('click', () => {
+      state[stateKey] = state[stateKey] === 'asc' ? 'desc' : 'asc';
+      syncButton();
+      onToggle();
+    });
+  }
+
+  function renderYearTimeline(container, items, {
+    sortOrder = 'asc',
+    yearIdPrefix = 'year',
+    formatCountLabel,
+    getGroupClassName,
+    sortGroupItems,
+    renderCard
+  }) {
+    const groupedByYear = new Map();
+    items.forEach((item, index) => {
+      const year = Number(item.year) || 0;
+      if (!groupedByYear.has(year)) groupedByYear.set(year, []);
+      groupedByYear.get(year).push({ item, index });
+    });
+
+    const years = Array.from(groupedByYear.keys()).sort((a, b) =>
+      sortOrder === 'asc' ? a - b : b - a
+    );
+
+    const timelineHtml = years.map(year => {
+      const entries = groupedByYear.get(year).slice();
+      if (sortGroupItems) {
+        entries.sort((a, b) => sortGroupItems(a.item, b.item));
+      }
+      const groupItems = entries.map(e => e.item);
+      const groupClass = getGroupClassName ? getGroupClassName(groupItems) : '';
+      const countLabel = formatCountLabel ? formatCountLabel(entries.length) : `${entries.length}`;
+      const cardsHtml = entries.map(e => renderCard(e.item, e.index)).join('');
+
+      return `
+        <section class="thesis-year-group ${groupClass}" id="${yearIdPrefix}-${year}" data-year="${year}">
+          <div class="thesis-year-marker">
+            <span class="thesis-year-dot" aria-hidden="true"></span>
+            <span class="thesis-year-badge">${year}</span>
+            <span class="thesis-year-count">${countLabel}</span>
+          </div>
+          <div class="thesis-year-cards">
+            ${cardsHtml}
+          </div>
+        </section>
+      `;
+    }).join('');
+
+    container.innerHTML = `
+      <div class="theses-timeline">
+        ${timelineHtml}
+      </div>
+    `;
+  }
+
   function initPublicationControls() {
     const searchInput = document.getElementById('pub-search-input');
     const yearSelect = document.getElementById('pub-year-select');
 
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
-        state.pubSearchQuery = e.target.value.toLowerCase().trim();
+        state.pubSearchQuery = normalizeSearchText(e.target.value);
         renderPublications();
       });
     }
@@ -264,6 +345,8 @@
         renderPublications();
       });
     }
+
+    bindSortButton('pubs-sort-btn', 'pubSortOrder', '2000 → 2025', '2025 → 2000', renderPublications);
   }
 
   function renderPublications() {
@@ -274,16 +357,17 @@
     const filtered = state.publications.filter(p => {
       const matchesYear = state.pubYearFilter === 'all' || p.year.toString() === state.pubYearFilter;
       const q = state.pubSearchQuery;
-      const matchesSearch = !q || 
-                            p.title.toLowerCase().includes(q) || 
-                            p.citation.toLowerCase().includes(q) ||
-                            (p.venue && p.venue.toLowerCase().includes(q));
+      const matchesSearch = !q ||
+                            normalizeSearchText(p.title).includes(q) ||
+                            normalizeSearchText(p.citation).includes(q) ||
+                            normalizeSearchText(p.venue).includes(q) ||
+                            p.year.toString().includes(q);
 
       return matchesYear && matchesSearch;
     });
 
     if (countEl) {
-      countEl.textContent = `${filtered.length} artículos encontrados`;
+      countEl.textContent = filtered.length === 1 ? '1 artículo encontrado' : `${filtered.length} artículos encontrados`;
     }
 
     if (filtered.length === 0) {
@@ -295,31 +379,36 @@
       return;
     }
 
-    container.innerHTML = filtered.map((p, idx) => {
-      const doiLink = p.doi ? `
-        <a href="${p.doi}" target="_blank" rel="noopener noreferrer" class="btn-doi-link">
-          DOI <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </a>
-      ` : '';
+    renderYearTimeline(container, filtered, {
+      sortOrder: state.pubSortOrder,
+      yearIdPrefix: 'pub-year',
+      formatCountLabel: count => (count === 1 ? '1 publicación' : `${count} publicaciones`),
+      renderCard: (p, pubIndex) => {
+        const doiLink = p.doi ? `
+          <a href="${escapeHtml(p.doi)}" target="_blank" rel="noopener noreferrer" class="btn-doi-link">
+            DOI <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+        ` : '';
 
-      return `
-        <article class="publication-item">
-          <div class="pub-year-badge">${p.year}</div>
-          <div class="pub-content">
-            <h4>${escapeHtml(p.title)}</h4>
-            ${p.venue ? `<p class="pub-venue">${escapeHtml(p.venue)}</p>` : ''}
-            <p class="pub-citation">${escapeHtml(p.citation)}</p>
-          </div>
-          <div class="pub-actions">
-            <button type="button" class="btn-bibtex" data-pub-index="${idx}">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              BibTeX
-            </button>
-            ${doiLink}
-          </div>
-        </article>
-      `;
-    }).join('');
+        return `
+          <article class="thesis-card-item pub-timeline-card">
+            <div class="thesis-meta-row">
+              ${p.venue ? `<span class="pub-venue-pill">${escapeHtml(p.venue)}</span>` : '<span></span>'}
+              <span style="font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600; color: var(--text-faint); white-space: nowrap;">${escapeHtml(String(p.year))}</span>
+            </div>
+            <h4 class="thesis-student">${escapeHtml(p.title)}</h4>
+            <p class="thesis-topic">${escapeHtml(p.citation)}</p>
+            <div class="pub-card-actions">
+              <button type="button" class="btn-bibtex" data-pub-index="${pubIndex}">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                BibTeX
+              </button>
+              ${doiLink}
+            </div>
+          </article>
+        `;
+      }
+    });
 
     // Eventos para abrir modal BibTeX
     container.querySelectorAll('.btn-bibtex').forEach(btn => {
@@ -333,15 +422,6 @@
   /* ==========================================================================
      6. Tesis & Egresados (Render y Filtro de Grado)
      ========================================================================== */
-  function normalizeSearchText(str) {
-    return (str || '')
-      .toString()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase()
-      .trim();
-  }
-
   function getThesisDegree(thesis) {
     if (thesis.degree === 'phd' || thesis.degree === 'masters') {
       return thesis.degree;
@@ -353,7 +433,6 @@
   function initThesesControls() {
     const buttons = document.querySelectorAll('.btn-degree-toggle');
     const searchInput = document.getElementById('thesis-search-input');
-    const sortBtn = document.getElementById('theses-sort-btn');
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -375,18 +454,7 @@
       });
     }
 
-    if (sortBtn) {
-      sortBtn.addEventListener('click', () => {
-        state.thesisSortOrder = state.thesisSortOrder === 'asc' ? 'desc' : 'asc';
-        const isDesc = state.thesisSortOrder === 'desc';
-        sortBtn.classList.toggle('is-desc', isDesc);
-        const label = sortBtn.querySelector('span');
-        if (label) {
-          label.textContent = isDesc ? '2025 → 2002' : '2002 → 2025';
-        }
-        renderTheses();
-      });
-    }
+    bindSortButton('theses-sort-btn', 'thesisSortOrder', '2002 → 2025', '2025 → 2002', renderTheses);
   }
 
   function renderTheses() {
@@ -422,27 +490,17 @@
     }
 
     // Agrupar por año y ordenar cronológicamente (2002 -> 2025 por defecto)
-    const groupedByYear = new Map();
-    filtered.forEach(t => {
-      const y = Number(t.year) || 0;
-      if (!groupedByYear.has(y)) groupedByYear.set(y, []);
-      groupedByYear.get(y).push(t);
-    });
-
-    const years = Array.from(groupedByYear.keys()).sort((a, b) =>
-      state.thesisSortOrder === 'asc' ? a - b : b - a
-    );
-
-    const timelineHtml = years.map(year => {
-      const items = groupedByYear.get(year).slice().sort((a, b) => {
+    renderYearTimeline(container, filtered, {
+      sortOrder: state.thesisSortOrder,
+      yearIdPrefix: 'thesis-year',
+      formatCountLabel: count => (count === 1 ? '1 tesis' : `${count} tesis`),
+      getGroupClassName: items => (items.some(t => getThesisDegree(t) === 'phd') ? 'has-phd' : ''),
+      sortGroupItems: (a, b) => {
         const aPhd = getThesisDegree(a) === 'phd' ? 0 : 1;
         const bPhd = getThesisDegree(b) === 'phd' ? 0 : 1;
         return aPhd - bPhd;
-      });
-      const hasPhd = items.some(t => getThesisDegree(t) === 'phd');
-      const countLabel = items.length === 1 ? '1 tesis' : `${items.length} tesis`;
-
-      const cardsHtml = items.map(t => {
+      },
+      renderCard: t => {
         const isPhd = getThesisDegree(t) === 'phd';
         return `
           <article class="thesis-card-item thesis-timeline-card ${isPhd ? 'is-phd' : ''}">
@@ -454,27 +512,8 @@
             <p class="thesis-topic">${escapeHtml(t.topic || 'Investigación computacional en sistemas inteligentes y minería de datos.')}</p>
           </article>
         `;
-      }).join('');
-
-      return `
-        <section class="thesis-year-group ${hasPhd ? 'has-phd' : ''}" id="thesis-year-${year}" data-year="${year}">
-          <div class="thesis-year-marker">
-            <span class="thesis-year-dot" aria-hidden="true"></span>
-            <span class="thesis-year-badge">${year}</span>
-            <span class="thesis-year-count">${countLabel}</span>
-          </div>
-          <div class="thesis-year-cards">
-            ${cardsHtml}
-          </div>
-        </section>
-      `;
-    }).join('');
-
-    container.innerHTML = `
-      <div class="theses-timeline">
-        ${timelineHtml}
-      </div>
-    `;
+      }
+    });
   }
 
   /* ==========================================================================

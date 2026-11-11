@@ -484,15 +484,18 @@
     const container = document.getElementById('courses-grid-container');
     if (!container) return;
 
-    container.innerHTML = state.courses.map(c => `
-      <article class="course-card-modern">
-        <img class="course-cover-img" src="${c.image}" alt="${escapeHtml(c.image_alt || c.title)}" loading="lazy" width="600" height="338">
-        <div class="course-body">
-          <span class="course-cat">${escapeHtml(c.category)}</span>
-          <h4 class="course-title">${escapeHtml(c.title)}</h4>
-        </div>
-      </article>
-    `).join('');
+    container.innerHTML = state.courses.map(c => {
+      const imgSrc = (c.image || '').replace(/^\/+/, './');
+      return `
+        <article class="course-card-modern">
+          <img class="course-cover-img" src="${escapeHtml(imgSrc)}" alt="${escapeHtml(c.image_alt || c.title)}" loading="lazy" width="600" height="338">
+          <div class="course-body">
+            <span class="course-cat">${escapeHtml(c.category)}</span>
+            <h4 class="course-title">${escapeHtml(c.title)}</h4>
+          </div>
+        </article>
+      `;
+    }).join('');
   }
 
   /* ==========================================================================

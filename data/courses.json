@@ -4,7 +4,7 @@
     "type": "ai",
     "category": "IA y análisis de datos",
     "title": "Generative AI",
-    "image": "/assets/images/courses/course-01-generative-ai.webp",
+    "image": "./assets/images/courses/course-01-generative-ai.webp",
     "image_alt": "Un prisma transforma piezas geométricas en nuevas formas y cintas de colores."
   },
   {
@@ -12,7 +12,7 @@
     "type": "ai",
     "category": "IA y análisis de datos",
     "title": "Data Mining",
-    "image": "/assets/images/courses/course-02-data-mining.webp",
+    "image": "./assets/images/courses/course-02-data-mining.webp",
     "image_alt": "Una lupa destaca grupos de datos representados por pequeñas esferas de colores."
   },
   {
@@ -20,7 +20,7 @@
     "type": "ai",
     "category": "IA y análisis de datos",
     "title": "Machine Learning",
-    "image": "/assets/images/courses/course-03-machine-learning.webp",
+    "image": "./assets/images/courses/course-03-machine-learning.webp",
     "image_alt": "Grupos de esferas separados por una superficie curva de decisión."
   },
   {
@@ -28,7 +28,7 @@
     "type": "ai",
     "category": "IA y análisis de datos",
     "title": "Neural Networks and Deep Learning",
-    "image": "/assets/images/courses/course-04-neural-networks.webp",
+    "image": "./assets/images/courses/course-04-neural-networks.webp",
     "image_alt": "Capas de nodos conectados que representan una red neuronal profunda."
   },
   {
@@ -36,7 +36,7 @@
     "type": "theory",
     "category": "Fundamentos de computación",
     "title": "Theory of Computation",
-    "image": "/assets/images/courses/course-05-computation-theory.webp",
+    "image": "./assets/images/courses/course-05-computation-theory.webp",
     "image_alt": "Estados enlazados y una cinta de símbolos geométricos que evocan un autómata."
   },
   {
@@ -44,7 +44,7 @@
     "type": "ai",
     "category": "IA y análisis de datos",
     "title": "Social Network Analysis",
-    "image": "/assets/images/courses/course-06-social-networks.webp",
+    "image": "./assets/images/courses/course-06-social-networks.webp",
     "image_alt": "Tres comunidades de nodos conectadas por un nodo puente."
   },
   {
@@ -52,7 +52,7 @@
     "type": "systems",
     "category": "Modelado de sistemas",
     "title": "System Modeling and Simulation",
-    "image": "/assets/images/courses/course-07-system-simulation.webp",
+    "image": "./assets/images/courses/course-07-system-simulation.webp",
     "image_alt": "Un péndulo acompañado de su representación digital y trayectoria simulada."
   },
   {
@@ -60,7 +60,7 @@
     "type": "systems",
     "category": "Modelado de sistemas",
     "title": "Petri Nets and Applications",
-    "image": "/assets/images/courses/course-08-petri-nets.webp",
+    "image": "./assets/images/courses/course-08-petri-nets.webp",
     "image_alt": "Una red de lugares circulares, transiciones rectangulares y fichas doradas."
   },
   {
@@ -68,15 +68,15 @@
     "type": "ai",
     "category": "IA y análisis de datos",
     "title": "Big Data and Big Analysis",
-    "image": "/assets/images/courses/course-09-big-data.webp",
+    "image": "./assets/images/courses/course-09-big-data.webp",
     "image_alt": "Una arquitectura de bloques de datos recorrida por flujos de información."
   },
   {
     "id": "course-10",
     "type": "seminar",
     "category": "Seminarios de investigación",
-    "title": "Research Seminar (Master&#39;s and Ph.D. level)",
-    "image": "/assets/images/courses/course-10-research-seminar.webp",
+    "title": "Research Seminar (Master's and Ph.D. level)",
+    "image": "./assets/images/courses/course-10-research-seminar.webp",
     "image_alt": "Una mesa de seminario con cuadernos y una escultura de ideas conectadas."
   }
 ]

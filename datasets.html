@@ -39,35 +39,37 @@
   <header class="site-header">
     <div class="container">
       <nav class="site-nav" aria-label="Navegación principal">
-        <a href="index.html" class="brand-wrapper">
-          <img src="./cinvestav-logo.png" alt="Cinvestav" class="brand-logo-img" width="130" height="46">
+        <a href="index.html" class="brand-wrapper" aria-label="DataLab Cinvestav Inicio">
+          <img src="./cinvestav-logo.png" alt="Logo de Cinvestav" class="brand-logo-img" width="96" height="34">
+          <span class="brand-divider" aria-hidden="true"></span>
           <div class="brand-identity">
             <span class="brand-title">Data<span class="accent">Lab</span></span>
-            <span class="brand-subtitle">Datasets & Benchmarks</span>
+            <span class="brand-subtitle">Ciencia de Datos</span>
           </div>
         </a>
 
         <ul class="nav-menu" id="nav-menu">
-          <li><a href="index.html" class="nav-link">Inicio DataLab</a></li>
-          <li><a href="datasets.html" class="nav-link active">Datasets (18)</a></li>
-          <li><a href="graduados.html" class="nav-link">Graduados (37)</a></li>
-          <li><a href="dra-xiaoou-li.html" class="nav-link">Dra. Xiaoou Li (CV)</a></li>
-          <li><a href="index.html#publicaciones" class="nav-link">Publicaciones</a></li>
-          <li><a href="index.html#cursos" class="nav-link">Cursos</a></li>
-          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+          <li class="nav-item-mobile-only"><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="investigacion.html" class="nav-link">Investigación</a></li>
+          <li><a href="actividades.html" class="nav-link">Actividades</a></li>
+          <li><a href="datasets.html" class="nav-link active" aria-current="page">Datasets</a></li>
+          <li><a href="publicaciones.html" class="nav-link">Publicaciones</a></li>
+          <li><a href="graduados.html" class="nav-link">Graduados</a></li>
+          <li><a href="cursos.html" class="nav-link">Cursos</a></li>
+          <li><a href="dra-xiaoou-li.html" class="nav-link">Dra. Xiaoou Li</a></li>
+          <li class="nav-item-mobile-only"><a href="contacto.html" class="nav-link">Contacto</a></li>
         </ul>
 
         <div class="nav-actions">
           <button type="button" class="btn-theme-toggle" id="theme-toggle-btn" aria-label="Cambiar tema">
             <!-- Inyectado por JS -->
           </button>
-          <a href="index.html#contacto" class="btn-cta-contact">
+          <a href="contacto.html" class="btn-cta-contact">
             Contacto
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
           </a>
-        
           <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           </button>
         </div>
       </nav>

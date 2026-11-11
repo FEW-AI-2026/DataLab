@@ -20,7 +20,8 @@
     datasetSearchQuery: '',
     pubSearchQuery: '',
     pubYearFilter: 'all',
-    thesisSearchQuery: ''
+    thesisSearchQuery: '',
+    thesisSortOrder: 'asc'
   };
 
   // Inicialización del DOM
@@ -332,22 +333,57 @@
   /* ==========================================================================
      6. Tesis & Egresados (Render y Filtro de Grado)
      ========================================================================== */
+  function normalizeSearchText(str) {
+    return (str || '')
+      .toString()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  function getThesisDegree(thesis) {
+    if (thesis.degree === 'phd' || thesis.degree === 'masters') {
+      return thesis.degree;
+    }
+    const label = normalizeSearchText(thesis.degree_label);
+    return label.includes('doctor') ? 'phd' : 'masters';
+  }
+
   function initThesesControls() {
     const buttons = document.querySelectorAll('.btn-degree-toggle');
     const searchInput = document.getElementById('thesis-search-input');
+    const sortBtn = document.getElementById('theses-sort-btn');
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
+        buttons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
-        state.activeThesisDegree = btn.getAttribute('data-degree');
+        btn.setAttribute('aria-pressed', 'true');
+        state.activeThesisDegree = btn.getAttribute('data-degree') || 'all';
         renderTheses();
       });
     });
 
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
-        state.thesisSearchQuery = e.target.value.toLowerCase().trim();
+        state.thesisSearchQuery = normalizeSearchText(e.target.value);
+        renderTheses();
+      });
+    }
+
+    if (sortBtn) {
+      sortBtn.addEventListener('click', () => {
+        state.thesisSortOrder = state.thesisSortOrder === 'asc' ? 'desc' : 'asc';
+        const isDesc = state.thesisSortOrder === 'desc';
+        sortBtn.classList.toggle('is-desc', isDesc);
+        const label = sortBtn.querySelector('span');
+        if (label) {
+          label.textContent = isDesc ? '2025 → 2002' : '2002 → 2025';
+        }
         renderTheses();
       });
     }
@@ -359,11 +395,13 @@
     if (!container) return;
 
     const filtered = state.theses.filter(t => {
-      const matchesDegree = state.activeThesisDegree === 'all' || t.degree === state.activeThesisDegree;
+      const thesisDegree = getThesisDegree(t);
+      const matchesDegree = state.activeThesisDegree === 'all' || thesisDegree === state.activeThesisDegree;
       const q = state.thesisSearchQuery;
       const matchesSearch = !q ||
-                            t.student.toLowerCase().includes(q) ||
-                            t.topic.toLowerCase().includes(q) ||
+                            normalizeSearchText(t.student).includes(q) ||
+                            normalizeSearchText(t.topic).includes(q) ||
+                            normalizeSearchText(t.degree_label).includes(q) ||
                             t.year.toString().includes(q);
 
       return matchesDegree && matchesSearch;
@@ -373,19 +411,70 @@
       countEl.textContent = `Listando ${filtered.length} de ${state.theses.length} tesis de grado (2002–2025)`;
     }
 
-    container.innerHTML = filtered.map(t => {
-      const isPhd = t.degree === 'phd';
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div style="grid-column: 1 / -1; padding: 2.5rem; text-align: center; color: var(--text-muted); background: var(--bg-surface); border-radius: var(--radius-md); border: 1px dashed var(--border-subtle);">
+          <p style="font-size: 1.05rem; font-weight: 600;">No se encontraron tesis para el filtro o búsqueda actual.</p>
+          <p style="font-size: 0.9rem; margin-top: 0.4rem;">Prueba con otro término o selecciona "Todas las tesis".</p>
+        </div>
+      `;
+      return;
+    }
+
+    // Agrupar por año y ordenar cronológicamente (2002 -> 2025 por defecto)
+    const groupedByYear = new Map();
+    filtered.forEach(t => {
+      const y = Number(t.year) || 0;
+      if (!groupedByYear.has(y)) groupedByYear.set(y, []);
+      groupedByYear.get(y).push(t);
+    });
+
+    const years = Array.from(groupedByYear.keys()).sort((a, b) =>
+      state.thesisSortOrder === 'asc' ? a - b : b - a
+    );
+
+    const timelineHtml = years.map(year => {
+      const items = groupedByYear.get(year).slice().sort((a, b) => {
+        const aPhd = getThesisDegree(a) === 'phd' ? 0 : 1;
+        const bPhd = getThesisDegree(b) === 'phd' ? 0 : 1;
+        return aPhd - bPhd;
+      });
+      const hasPhd = items.some(t => getThesisDegree(t) === 'phd');
+      const countLabel = items.length === 1 ? '1 tesis' : `${items.length} tesis`;
+
+      const cardsHtml = items.map(t => {
+        const isPhd = getThesisDegree(t) === 'phd';
+        return `
+          <article class="thesis-card-item thesis-timeline-card ${isPhd ? 'is-phd' : ''}">
+            <div class="thesis-meta-row">
+              <span class="thesis-degree-pill ${isPhd ? 'phd' : ''}">${escapeHtml(t.degree_label || (isPhd ? 'Doctorado' : 'Maestría'))}</span>
+              <span style="font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600; color: var(--text-faint);">${escapeHtml(String(t.year))}</span>
+            </div>
+            <h4 class="thesis-student">${escapeHtml(t.student)}</h4>
+            <p class="thesis-topic">${escapeHtml(t.topic || 'Investigación computacional en sistemas inteligentes y minería de datos.')}</p>
+          </article>
+        `;
+      }).join('');
+
       return `
-        <article class="thesis-card-item">
-          <div class="thesis-meta-row">
-            <span class="thesis-degree-pill ${isPhd ? 'phd' : ''}">${isPhd ? 'Doctorado' : 'Maestría'}</span>
-            <span style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; color: var(--text-faint);">${t.year}</span>
+        <section class="thesis-year-group ${hasPhd ? 'has-phd' : ''}" id="thesis-year-${year}" data-year="${year}">
+          <div class="thesis-year-marker">
+            <span class="thesis-year-dot" aria-hidden="true"></span>
+            <span class="thesis-year-badge">${year}</span>
+            <span class="thesis-year-count">${countLabel}</span>
           </div>
-          <h4 class="thesis-student">${escapeHtml(t.student)}</h4>
-          <p class="thesis-topic">${escapeHtml(t.topic || 'Investigación computacional en sistemas inteligentes y minería de datos.')}</p>
-        </article>
+          <div class="thesis-year-cards">
+            ${cardsHtml}
+          </div>
+        </section>
       `;
     }).join('');
+
+    container.innerHTML = `
+      <div class="theses-timeline">
+        ${timelineHtml}
+      </div>
+    `;
   }
 
   /* ==========================================================================
